@@ -8,7 +8,7 @@ Trackgenix is a web system that allows the registration of hours worked accordin
 - Allows you to select multiple roles.
 - Export documents as Excel, Word, HTML and PDF
 
-![Trackgenix app](https://user-images.githubusercontent.com/101294825/160220330-a7b07609-5f7c-4213-85e4-9c4b47bf803b.jpg)
+![Trackgenix](https://user-images.githubusercontent.com/101294825/160220875-2a88018b-c2f7-4961-a1f7-e1b5747d79aa.jpg)
 
 ## Installation
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Trackgenix.
