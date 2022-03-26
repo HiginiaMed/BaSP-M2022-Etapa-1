@@ -45,11 +45,11 @@
         <img src="D:\Users\acerpc\Desktop\RR\reloj.png">
         <hr>
         <h2>Functionalities</h2>
-        <form action="/action_page.php">
-            <input type="text" id="hours" name="hours" value="°Hours log">
-            <input type="text" id="hours" name="hours" value="°Resource management ">
-            <input type="text" id="hours" name="hours" value="°Reports">
-            <input type="text" id="hours" name="hours" value="°Multiple roles">
+        <form action="/functionalities.php">
+            <input type="number" name="hours" placeholder="°Hours log">
+            <input type="text" name="Resource management" placeholder="°Resource management ">
+            <input type="text" name="°Reports" placeholder="°Reports">
+            <input type="text" name="role" placeholder="°Multiple roles">
         </form>
         <hr>
         <h2>Why use Trackgenix?</h2>
@@ -74,6 +74,20 @@
             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
         </p>
         <hr>
-        
+        <h2>Form</h2>
+        <form action="/functionalities.php">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <h4>Contact area:</h4>
+            <input type="checkbox" id="text" name="text1" value="Human Resources">
+  <label for="text1"> Human Resources</label>
+            <input type="checkbox" id="text" name="text2" value="Systems">
+  <label for="text2"> Systems</label>
+            <input type="checkbox" id="text" name="text3" value="Commercialization">
+  <label for="text3"> Commercialization</label>
+            <p></p>
+            <label for="message">Message:</label>
+            <textarea name="message"></textarea>
+        </form>
     </body>
 </html>
