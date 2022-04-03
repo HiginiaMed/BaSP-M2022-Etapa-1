@@ -21,3 +21,14 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Contact
+
+Email: higiniamc@gmail.com
+
+Linkedin: Maria Higinia Médica
+
+Project Link: https://github.com/HiginiaMed/BaSP-M2022-Etapa-1
+
+Developer
+María Higinia Médica

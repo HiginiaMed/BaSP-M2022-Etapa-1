@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
+        <link rel="stylesheet" href="css\reset.css">
     </head>
     <body>
         <header>
@@ -12,39 +13,27 @@
             <label>Trackgenix</label>
         </header>
         <aside>
-            <a title="Hamb" href="http://www.figma.com"><img src="Assets/hamb.jpg" width="30" /></a>
-            <div class="topnav">
+            <form>
                 <input type="text" placeholder="Search..">
-            </div>
-            <div> 
-                <label>Menu</label>
-            </div>
-            <label>
-                <a href="https://www.figma.com/">Home</a>
-            </label>
-            <label>
-                <a href="https://www.figma.com/">Sign Up</a>
-            <label>
-            <label>
-                <a href="https://www.figma.com/">Log In</a>
-            <label>
-            <label>
-                <a href="https://www.figma.com/">Contact Information</a>
-            </label>
+            </form>
+            <span>Menu</span>
+            <a href="https://www.figma.com/">Home</a>
+            <a href="https://www.figma.com/">Sign Up</a>
+            <a href="https://www.figma.com/">Log In</a>
+            <a href="https://www.figma.com/">Contact Information</a>
             <p>
                 Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
                 ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
                 Sed nulla amet lorem feugiat tempus aliquam.
             </p>
-            <div>
+            <label>
                 <img src="Assets/mail.png"> 
                 <a href="https://www.gmail.com/">information@untitled.tld</a>
-            </div>
-            <div>
                 <img src="Assets/addres.png"> 
                 <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
-            </div>
+            </label>
         </aside>
+        <main>
         <H1>Trackgenix S.A.</H1>
         <section>
             <h2>Trackgenix APP</h2>
@@ -62,7 +51,7 @@
         </section>
         <section>
             <h2>Functionalities</h2>
-            <form action="/functionalities.php">
+            <form>
                 <input type="number" name="hours" placeholder="°Hours log">
                 <input type="text" name="Resource management" placeholder="°Resource management ">
                 <input type="text" name="°Reports" placeholder="°Reports">
@@ -71,26 +60,34 @@
         </section>
         <section>
             <h2>Why use Trackgenix?</h2>
-            <h3>Productivity booster</h3>
-            <p>
-                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
-            <h3>Leadership and team management</h3>
-            <p>
-                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
-            <h3>Work traceability</h3>
-            <p>
-                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
-            <h3>Decision making</h3>
-            <p>
-                Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
+            <div>
+                <h3>Productivity booster</h3>
+                <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
+                    Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+            </div>
+            <div>
+                <h3>Leadership and team management</h3>
+                <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
+                    Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+            </div>
+            <div>
+                <h3>Work traceability</h3>
+                <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
+                    Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+            </div>
+            <div>
+                <h3>Decision making</h3>
+                <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore.
+                    Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+            </div>
         </section>
         <section>
             <h2>Form</h2>
@@ -139,34 +136,35 @@
             </p>
         </section>
         <section>
-            <table style="width:60%" align="center">
-                <tr>
-                    <th><h3>Products</h3></th>
-                    <th><h3>Company</h3></th>
-                    <th><h3>Support</h3></th>
-                </tr>
-                <tr>
-                    <td>1. Functionalities</td>
-                    <td>1. About us</td>
-                    <td>1. Help</td>
-                </tr>
-                <tr>
-                    <td>2. Downloads</td>
-                    <td>2. Clients</td>
-                    <td>2. Tutorials</td>
-                </tr>
-                <tr>
-                    <td>3. Integrations</td>
-                    <td>3. Resources</td>
-                    <td>3. API</td>
-                </tr>
-                <tr>
-                    <td>4. Extras</td>
-                    <td>4. Blog</td>
-                    <td>4. Contact</td>
-                </tr>
-            </table>
+            <div>
+                <h4>Products</h4>
+                <ol >
+                    <li><a href="https://www.figma.com/">Functionalities</a></li>
+                    <li><a href="https://www.figma.com/">Downloads</a></li>
+                    <li><a href="https://www.figma.com/">Integrations</a></li>
+                    <li><a href="https://www.figma.com/">Extras</a></li>
+                </ol>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ol>
+                    <li><a href="https://www.figma.com/">About us</a></li>
+                    <li><a href="https://www.figma.com/">Clients</a></li>
+                    <li><a href="https://www.figma.com/">Resources</a></li>
+                    <li><a href="https://www.figma.com/">Blog</a></li>
+                </ol>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ol>
+                    <li><a href="https://www.figma.com/">Help</a></li>
+                    <li><a href="https://www.figma.com/">Tutorials</a></li>
+                    <li><a href="https://www.figma.com/">API</a></li>
+                    <li><a href="https://www.figma.com/">Contact</a></li>
+                </ol>
+            </div>
         </section> 
+        </main>
         <footer>
             <div align="center">
                 <a title="Instagram" href="http://www.instagram.com"><img src="Assets/ig.png" width="30" /></a>
