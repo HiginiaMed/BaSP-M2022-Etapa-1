@@ -10,7 +10,7 @@
     </head>
     <body>
         <header class="trackgenix">
-            <img id="logo" src="Assets/logo.png" id="logo" >
+            <img src="./Assets/logo.png" id="logo" >
             <label>Trackgenix </label>
         </header>
         <aside class="sidebar-pos">
@@ -32,21 +32,21 @@
                     Sed nulla amet lorem feugiat tempus aliquam.
                 </p>
                 <p class="sidebar">
-                    <img src="Assets/mail.png"> 
+                    <img src="./Assets/mail.png"> 
                     <a href="https://www.gmail.com/">information@untitled.tld</a>
                 </p>
                 <p class="sidebar">
-                    <img src="Assets/addres.png"> 
+                    <img src="./Assets/addres.png"> 
                     <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
                 </p>
                 </label>
             </div>
         </aside>
         <main>
-        <H1 id="greenline">Trackgenix S.A.</H1>
+        <H1 class="greenline">Trackgenix S.A.</H1>
         <section>
             <h2>Trackgenix APP</h2>
-            <img src="Assets/reloj.png" id="reloj">
+            <img src="./Assets/reloj.png" id="reloj">
             <p class="paragraph-main">
                 Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
                 tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
@@ -58,7 +58,7 @@
                 Integer ac pellentesque praesent.
             </p>
         </section>
-        <div id="greenline">
+        <div class="greenline">
         </div>
         <section>
             <h2>Functionalities</h2>
@@ -70,7 +70,7 @@
                 <input type="text" name="role" placeholder="°Multiple roles" class="items" id="bold">
             </form>
         </section>
-        <div id="greenline">
+        <div class="greenline">
         </div>
         <section>
             <h2>Why use Trackgenix?</h2>
@@ -103,45 +103,54 @@
                 </p>
             </div>
         </section>
-        <div id="greenline">
+        <div class="greenline">
         </div>
         <section>
             <h2>Form</h2>
-            <form action="/functionalities.php">
-                <div class="form1">
-                    <input type="text" name="name" placeholder="Name">
-                </div>
-                <div class="form1">
-                    <label for="message" id="bold">Message:</label>
-                    <textarea name="message" placeholder="Message"></textarea>
-                </div>
-                <div class="form1">
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <h4 class="contact-area">Contact area:</h4>
-                <div class="contact-area2">
-                    <input type="checkbox" id="text" name="text1" value="Human Resources">
-                    <label for="text1"> Human Resources</label>
-                </div>
-                <div class="contact-area2">
-                    <input type="checkbox" id="text" name="text2" value="Systems">
-                    <label for="text2"> Systems</label>
-                </div>
-                <div class="contact-area2">
-                    <input type="checkbox" id="text" name="text3" value="Commercialization">
-                    <label for="text3"> Commercialization</label>
-                </div>
+            <form>
                 <div>
-                    <input type="submit" name="send" value="Send" class="button">
-                    <input type="submit" name="return" value="Return" class="button">
+                    <div>
+                        <div class="form1">
+                            <input type="text" id="name" name="name" required minlength="4" 
+                            maxlength="10" size="30" placeholder="Name">
+                        </div>
+                        <div class="form1">
+                            <input type="text" id="email" name="email" required minlength="4" 
+                            maxlength="30" size="30" placeholder="Email">
+                        </div>
+                        <h3>Contact Area:</h3>
+                        <div class="formca">
+                            <div>
+                                <input type="checkbox" id="cbox1" value="first_checkbox">
+                                <label for="cbox1">Human resources</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cbox2" value="second_checkbox"> 
+                                <label for="cbox2">Systems</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cbox3" value="third_checkbox"> 
+                                <label for="cbox3">Commercialization</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form2">
+                        <p>
+                            Message
+                        </p>
+                        <input type="text" id="message" name="message" required minlength="4" maxlength="200" 
+                        size="40" placeholder="Message">
+                        <p>
+                            <button name="Send">Send</button>
+                            <button name="Return">Return</button>
+                        </p>
+                    </div>
                 </div>
             </form>
         </section>
-        <div id="greenline">
-        </div>
         <section>
-            <h2>History</h2>
-            <img src="Assets/History1.jpg" class="history-display">
+            <h2 class= history>History</h2>
+            <img src="./Assets/History1.jpg" class="history-display">
             <p class="history-display">
                 Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
                 tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
@@ -155,9 +164,9 @@
                 Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
                 Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
             </p>
-            <img src="Assets/History2.jpg" class="history-display">
+            <img src="./Assets/History2.jpg" class="history-display">
         </section>
-        <div id="greenline">
+        <div class="greenline">
         </div>
             <section>
                 <div class="item-prod">
@@ -190,18 +199,18 @@
             </section>
         </section> 
         </main>
-        <div id="greenline">
+        <div class="greenline">
         </div>
         <footer >
             <div align="center">
-                <a title="Instagram" href="http://www.instagram.com"><img src="Assets/ig.png" width="30" /></a>
-                <a title="Twitter" href="http://www.twitter.com"><img src="Assets/tt.png" width="30" /></a>
-                <a title="Facebook" href="http://www.facebook.com"><img src="Assets/fb.png" width="30" /></a>
-                <a title="Linkedin" href="http://www.linkedin.com"><img src="Assets/linkedin.png" width="30" /></a>
-                <a title="GitHub" href="http://www.github.com"><img src="Assets/github.png" width="30" /></a>
+                <a title="Instagram" href="http://www.instagram.com"><img src="./Assets/ig.png" width="30" /></a>
+                <a title="Twitter" href="http://www.twitter.com"><img src="./Assets/tt.png" width="30" /></a>
+                <a title="Facebook" href="http://www.facebook.com"><img src="./Assets/fb.png" width="30" /></a>
+                <a title="Linkedin" href="http://www.linkedin.com"><img src="./Assets/linkedin.png" width="30" /></a>
+                <a title="GitHub" href="http://www.github.com"><img src="./Assets/github.png" width="30" /></a>
             </div>
             <div align="center">
-                <img src="Assets/logo.png">
+                <img src="./Assets/logo.png">
             </div>
             <div align="center">
                 <h4 class="paragraph-main">Rosario, Argentina</h4>
