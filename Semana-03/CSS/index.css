@@ -96,7 +96,7 @@ p.menu {
 
 #greenline {
   border-bottom: solid 3px #AACE9B;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 main {
@@ -212,5 +212,10 @@ h3 {
   font-weight: bold;  
 }
 
-
+h4 {
+  color: #34636E;
+  font-size: 14px;
+  font-weight: normal;
+  padding-bottom: 15px;
+}
 
