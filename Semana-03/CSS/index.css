@@ -124,21 +124,93 @@ h2 {
 #reloj {
   display: inline-block;
   position: absolute;
-  width: 270px;
-  height: 270px;
+  width: 230px;
+  height: 220x;
   right: 100px;
   padding-top: 0px;
 }
 
 p.paragraph-main {
   padding-bottom: 20px;
-  padding-right: 650px;
-  padding-left: 70px;
+  width: 45%;
   color: #958888;
 }
 
-input {
-  border: 1px solid #373867;
-  border-radius: 4px;
+.items {
+  display: inline-block;
+  padding: 5px;
+  margin-top: 50px;
+  margin-left: 170px;
 }
+
+::placeholder { color: #34636E; }
+
+.items-w{
+  display: inline-block;
+  padding: 5px;
+  width: 36%;
+  margin-top: 50px;
+  margin-left: 180px;
+}
+.items-w2{
+  display: inline-block;
+  padding: 5px;
+  width: 36%;
+  margin-top: 50px;
+  margin-left: 60px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.form1 {
+  display: inline-block;
+  padding-bottom: 40px;
+  margin-left: 180px;
+}
+
+.contact-area {
+  margin-left: 95px;
+  padding-bottom: 10px;
+  margin-left: 180px;
+}
+
+.contact-area2 {
+  margin-left: 95px;
+  padding-bottom: 10px;
+  margin-left: 280px;
+}
+
+.button {
+  margin-top: 20px;
+  margin-left: 500px;
+}
+
+.history-display {
+  display: inline-block;
+  width: 30%;
+  margin-left: 180px;
+}
+
+.history {
+  margin-bottom: 25px;
+}
+
+.item-prod {
+  display: inline-block;
+  width: 8%;
+  padding-left: 190px;
+  color: #958888;
+
+}
+
+.item-prod-font {
+  color: black;
+  font-weight: bold;  
+}
+
+
 
