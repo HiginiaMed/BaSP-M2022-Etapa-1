@@ -1,4 +1,11 @@
 main {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
   margin-top: 80px;
   display: flex;
   flex-direction: column;
@@ -6,8 +13,9 @@ main {
 }
 
 #hamb {
-  width: 20px;
-  padding-bottom: 20px;
+  width: 8%;
+  padding: 20px;
+  display: flex;
   align-items: flex-start;
 }
 
@@ -17,28 +25,23 @@ h1 {
   font-size: 35px;
   line-height: 10px;
   color: #000;
-  padding-bottom: 3%;
-  align-items: center;
 }
 
 h2 {
   font-size: 38px;
   font-weight: 450;
-  align-items: center;
   padding-bottom: 3%;
 }
 
 #reloj {
   width: 30%;
   padding-top: 0px;
-  align-items: center;
 }
 
-p.paragraph-main {
+.paragraph-main {
   padding-bottom: 20px;
-  width: 55%;
+  width: 100%;
   color: #958888;
-
 }
 
 .items, input {
@@ -54,13 +57,9 @@ p.paragraph-main {
 
 .items-w{
   padding: 5px;
-  width: 36%;
+  width: 55%;
   margin-top: 50px;
-}
-.items-w2{
-  padding: 5px;
-  width: 36%;
-  margin-top: 50px;
+  justify-content: center;
 }
 
 h3 {
@@ -122,4 +121,9 @@ h4 {
 .greenline {
   border-bottom: solid 3px #AACE9B;
   padding-bottom: 30px;
+}
+
+.greenline-top {
+  border-top: solid 3px #AACE9B;
+  margin-top: 20px;
 }

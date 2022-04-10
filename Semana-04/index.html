@@ -5,20 +5,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-        <link rel="stylesheet" href="css\reset.css">
-        <link rel="stylesheet" href="css\header.css">
-        <link rel="stylesheet" href="css\sidebar.css">
-        <link rel="stylesheet" href="css\main.css">
-        <link rel="stylesheet" href="css\footer.css">
-        <link rel="stylesheet" href="css\style.css">
+        <link rel="stylesheet" href=".\css\reset.css">
+        <link rel="stylesheet" href=".\css\header.css">
+        <link rel="stylesheet" href=".\css\sidebar.css">
+        <link rel="stylesheet" href=".\css\main.css">
+        <link rel="stylesheet" href=".\css\footer.css">
+        <link rel="stylesheet" href=".\css\style.css">
     </head>
     <body>
-        <section class="container">
+        <div>
             <header>
                 <img src="./Assets/logo.png" id="logo">
                 <label class="trackgenix">Trackgenix </label>
             </header>
-            <aside>
+        </div>
+        <aside>
+        <section class="container">
                 <div class="form-aside">
                     <form>
                         <input type="text" placeholder="Search..">
@@ -44,29 +46,30 @@
                         <img src="./Assets/addres.png"> 
                         <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
                     </p>
-                    </label>
                 </div>
             </aside>
         </section>
-        <main>
+        <div>
             <img src="./Assets/hamb.jpg" id="hamb">
-            <h1 class="greenline">Trackgenix S.A.</h1>
-            <h2>Trackgenix APP</h2>
-            <p class="paragraph-main">
-                Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
-                Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
-                Vestibulum ante ipsum primis sagittis eget. tempus euismod.
-                Vestibulum ante ipsum primis in faucibus vestibulum.
-                Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                Integer ac pellentesque praesent.
-            </p>
-            <img src="./Assets/reloj.png" id="reloj">
-            <div class="greenline">
-            </div>
+        </div>
+        <main>
+            <h1>Trackgenix S.A.</h1>
             <section>
-                <h2>Functionalities</h2>
+                <h2 class="greenline-top">Trackgenix APP</h2>
+                <p class="paragraph-main">
+                    Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
+                    tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                    Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+                    Vestibulum ante ipsum primis sagittis eget. tempus euismod.
+                    Vestibulum ante ipsum primis in faucibus vestibulum.
+                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                    Integer ac pellentesque praesent.
+                </p>
+            </section>
+            <img src="./Assets/reloj.png" id="reloj">
+            <section>
+                <h2 class="greenline-top">Functionalities</h2>
                 <form class="items">
                     <input type="number" name="hours" placeholder="°Hours log">
                     <input type="text" name="Resource management" placeholder="°Resource management">
@@ -74,43 +77,41 @@
                     <input type="text" name="role" placeholder="°Multiple roles">
                 </form>
             </section>
-            <div class="greenline">
-            </div>
             <section>
-                <h2>Why use Trackgenix?</h2>
-                <div class="items-w">
-                    <h3>Productivity booster</h3>
-                    <p class="paragraph-main">
-                        Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                        Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-                    </p>
-                </div>
-                <div class="items-w2">
-                    <h3>Work traceability</h3>
-                    <p class="paragraph-main">
-                        Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                        Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-                    </p>
-                </div>
-                <div class="items-w">
-                    <h3>Leadership and team management</h3>
-                    <p class="paragraph-main">   
-                        Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                        Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-                    </p>
-                </div>
-                <div class="items-w2">
-                    <h3>Decision making</h3>
-                    <p class="paragraph-main">
-                        Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
-                        Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-                    </p>
-                </div>
+                <h2 class="greenline-top">Why use Trackgenix?</h2>
+                <section class="items-w">
+                    <div>
+                        <h3>Productivity booster</h3>
+                        <p class="paragraph-main">
+                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Work traceability</h3>
+                        <p class="paragraph-main">
+                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Leadership and team management</h3>
+                        <p class="paragraph-main">   
+                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Decision making</h3>
+                        <p class="paragraph-main">
+                            Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
+                            Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
+                        </p>
+                    </div>
+                </section>
             </section>
-            <div class="greenline">
-            </div>
             <section>
-                <h2>Form</h2>
+                <h2 class="greenline-top">Form</h2>
                 <form>
                     <div>
                         <div>

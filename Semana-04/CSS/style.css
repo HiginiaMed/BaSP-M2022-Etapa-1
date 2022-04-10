@@ -7,19 +7,28 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
+/* phone */
 @media screen and (max-width: 480px) {
   aside {
     display: none;
   }
 }
 
-@media screen and (min-widht: 480px) {
+/* tablet */
+@media screen and (min-width: 768px) {
+  
+}
+/* pc */
+@media screen and (min-width: 900px) {
   .container {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
   }
+  #hamb {
+    display: none;
+  }
+  
 }
 
 /* .container {
