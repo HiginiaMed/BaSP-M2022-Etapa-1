@@ -54,30 +54,36 @@
         </div>
         <main>
             <h1>Trackgenix S.A.</h1>
-            <section>
-                <h2 class="greenline-top">Trackgenix APP</h2>
-                <p class="paragraph-main">
-                    Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                    tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
-                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                    Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
-                    Vestibulum ante ipsum primis sagittis eget. tempus euismod.
-                    Vestibulum ante ipsum primis in faucibus vestibulum.
-                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                    Integer ac pellentesque praesent.
-                </p>
+            <section class="first-par">
+                <div>
+                    <h2 class="greenline-top">Trackgenix APP</h2>
+                    <p class="paragraph-main">
+                        Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
+                        tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+                        Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                        Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+                        Vestibulum ante ipsum primis sagittis eget. tempus euismod.
+                        Vestibulum ante ipsum primis in faucibus vestibulum.
+                        Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                        Integer ac pellentesque praesent.
+                    </p>
+                </div>
+                <img src="./Assets/reloj.png" id="reloj">
             </section>
-            <img src="./Assets/reloj.png" id="reloj">
-            <section>
+            <div>
                 <h2 class="greenline-top">Functionalities</h2>
-                <form class="items">
-                    <input type="number" name="hours" placeholder="°Hours log">
-                    <input type="text" name="Resource management" placeholder="°Resource management">
-                    <input type="text" name="°Reports" placeholder="°Reports">
-                    <input type="text" name="role" placeholder="°Multiple roles">
-                </form>
-            </section>
-            <section>
+                <section class="items">
+                    <div>
+                        <input type="number" name="hours" placeholder="°Hours log">
+                        <input type="text" name="Reports" placeholder="°Reports">
+                    </div>
+                    <div>
+                        <input type="text" name="Resource management" placeholder="°Resource management">
+                        <input type="text" name="role" placeholder="°Multiple roles">
+                    </div>
+                </section>
+            </div>
+            <div>
                 <h2 class="greenline-top">Why use Trackgenix?</h2>
                 <section class="items-w">
                     <div>
@@ -86,8 +92,6 @@
                             Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
                         </p>
-                    </div>
-                    <div>
                         <h3>Work traceability</h3>
                         <p class="paragraph-main">
                             Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
@@ -100,8 +104,6 @@
                             Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
                             Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
                         </p>
-                    </div>
-                    <div>
                         <h3>Decision making</h3>
                         <p class="paragraph-main">
                             Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. 
@@ -109,98 +111,109 @@
                         </p>
                     </div>
                 </section>
-            </section>
-            <section>
+            </div>
+            <div>
                 <h2 class="greenline-top">Form</h2>
                 <form class="form-marg">
                     <div>
-                        <div>
-                            <div class="form1">
-                                <input type="text" id="name" name="name" required minlength="4" 
-                                maxlength="10" size="30" placeholder="Name">
-                            </div>
-                            <div class="form1">
-                                <input type="text" id="email" name="email" required minlength="4" 
-                                maxlength="30" size="30" placeholder="Email">
-                            </div>
-                            <h3>Contact Area:</h3>
-                            <div class="formca">
-                                <div>
-                                    <input type="checkbox" id="cbox1" value="first_checkbox">
-                                    <label for="cbox1">Human resources</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="cbox2" value="second_checkbox"> 
-                                    <label for="cbox2">Systems</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="cbox3" value="third_checkbox"> 
-                                    <label for="cbox3">Commercialization</label>
-                                </div>
-                            </div>
+                        <div class="form1">
+                            <input type="text" id="name" name="name" required minlength="4" 
+                            maxlength="10" size="30" placeholder="Name">
                         </div>
-                        <div class="form2">
-                            <p>
-                                Message
-                            </p>
-                            <input type="text" id="message" name="message" required minlength="4" maxlength="200" 
-                            size="1120" placeholder="Message" class="form2">
+                        <div class="form1">
+                            <input type="text" id="email" name="email" required minlength="4" 
+                            maxlength="30" size="30" placeholder="Email">
                         </div>
-                            <div class="button">
-                                <button name="Return">Return</button>
-                                <button name="Send">Send</button>
+                        <h3>Contact Area:</h3>
+                        <div class="formca">
+                            <div>
+                                <input type="checkbox" id="cbox1" value="first_checkbox">
+                                <label for="cbox1">Human resources</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cbox2" value="second_checkbox"> 
+                                <label for="cbox2">Systems</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="cbox3" value="third_checkbox"> 
+                                <label for="cbox3">Commercialization</label>
                             </div>
                         </div>
                     </div>
+                    <div class="form2">
+                        <p>
+                            Message
+                        </p>
+                        <input type="text" id="message" name="message" required minlength="4" maxlength="200" 
+                        size="1120" placeholder="Message" class="form2">
+                    </div>
+                    <div>
+                        <div id="center">
+                            <button class="button" name="Return">Return</button>
+                        </div>
+                        <div id="center">
+                            <button class="button2" name="Send">Send</button>
+                        </div>
+                    </div>
                 </form>
-            </section>
-            <section>
+            </div>
+            <div>
                 <h2 class= history>History</h2>
-                <p class="history-display">
-                    Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                    tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
-                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                    Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
-                    Vestibulum ante ipsum primis sagittis eget. tempus euismod.
-                </p>
-                <img src="./Assets/History1.jpg" class="history-display">
-                <p class="history-display">
-                    Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
-                    tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
-                    Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
-                    Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
-                </p>
-                <img src="./Assets/History2.jpg" class="history-display">
-            </section>
-            <section class="greenline-top">
-                <div class="item-prod">
-                    <p class="item-prod-font">Products</p>
-                        <ol>
-                            <li>Funcionalities</li>
-                            <li>Donwloads</li>
-                            <li>Integrations</li>
-                            <li>Extras</li>
-                        </ol>    
+                <section class= container-h>
+                    <div>
+                        <p class="history-display">
+                            Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
+                            tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+                            Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                            Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+                            Vestibulum ante ipsum primis sagittis eget. tempus euismod.
+                        </p>
+                        <img src="./Assets/History1.jpg" class="history-display">
+                    </div>
+                    <div>
+                        <p class="history-display">
+                            Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
+                            tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
+                            Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
+                            Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+                        </p>
+                        <img src="./Assets/History2.jpg" class="history-display">
+                    </div>
+                </section>
+            </div>
+            <div>
+                <div class="greenline-top">
+                    <div class="container-p">
+                        <div class="item-prod">
+                            <p class="item-prod-font">Products</p>
+                            <ol>
+                                <li>Funcionalities</li>
+                                <li>Donwloads</li>
+                                <li>Integrations</li>
+                                <li>Extras</li>
+                            </ol>
+                        </div>
+                        <div class="item-prod">
+                                <p div class="item-prod-font">Company</p>
+                                <ol>
+                                    <li>About Us</li>
+                                    <li>Clients</li>
+                                    <li>Resources</li>
+                                    <li>Blog</li>
+                                </ol>    
+                        </div>
+                        <div class="item-prod">
+                            <p div class="item-prod-font">Suport</p>
+                            <ol>
+                                <li>Help</li>
+                                <li>Tutorials</li>
+                                <li>API</li>
+                                <li>Contact</li>
+                            </ol>    
+                        </div>
+                    </div>
                 </div>
-                <div class="item-prod">
-                    <p div class="item-prod-font">Company</p>
-                    <ol>
-                        <li>About Us</li>
-                        <li>Clients</li>
-                        <li>Resources</li>
-                        <li>Blog</li>
-                    </ol>    
-                </div>
-                <div class="item-prod">
-                    <p div class="item-prod-font">Suport</p>
-                    <ol>
-                        <li>Help</li>
-                        <li>Tutorials</li>
-                        <li>API</li>
-                        <li>Contact</li>
-                    </ol>    
-                </div>
-            </section>
+            </div>
         </main>
         <div class="greenline">
         </div>
@@ -216,8 +229,8 @@
                 <img src="./Assets/logo.png">
             </div>
             <div>
-                <h4 class="paragraph-main">Rosario, Argentina</h4>
-                <h4 class="paragraph-main">Copyright © 2022 Radium Rocket. All rights reserved.</h4>
+                <h4>Rosario, Argentina</h4>
+                <h4>Copyright © 2022 Radium Rocket. All rights reserved.</h4>
             </div>
         </footer>
     </body>

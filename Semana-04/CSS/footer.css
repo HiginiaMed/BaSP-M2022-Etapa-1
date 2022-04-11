@@ -7,13 +7,13 @@ footer {
   align-items: center;
 }
 
-.icons {
-  padding-left: 2px;
-  padding-right: 2px;
+.icons, a {
+  padding-bottom: 25px;
+  padding-left: 15px;
 }
 
 h4 {
-  color: #34636E;
+  color: #958888;
   font-size: 14px;
   font-weight: normal;
   padding-bottom: 15px;
