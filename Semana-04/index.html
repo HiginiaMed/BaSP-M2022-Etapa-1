@@ -5,12 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trackgenix</title>
-        <link rel="stylesheet" href=".\css\reset.css">
-        <link rel="stylesheet" href=".\css\header.css">
-        <link rel="stylesheet" href=".\css\sidebar.css">
-        <link rel="stylesheet" href=".\css\main.css">
-        <link rel="stylesheet" href=".\css\footer.css">
-        <link rel="stylesheet" href=".\css\style.css">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/sidebar.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
         <div>
@@ -50,7 +50,7 @@
             </aside>
         </section>
         <div>
-            <img src="./Assets/hamb.jpg" id="hamb">
+            <a href="https://www.figma.com/"><img src="./Assets/hamb.jpg" id="hamb"></a>
         </div>
         <main>
             <h1>Trackgenix S.A.</h1>
@@ -112,7 +112,7 @@
             </section>
             <section>
                 <h2 class="greenline-top">Form</h2>
-                <form>
+                <form class="form-marg">
                     <div>
                         <div>
                             <div class="form1">
@@ -144,10 +144,11 @@
                                 Message
                             </p>
                             <input type="text" id="message" name="message" required minlength="4" maxlength="200" 
-                            size="40" placeholder="Message">
-                            <div>
-                                <button name="Send">Send</button>
+                            size="1120" placeholder="Message" class="form2">
+                        </div>
+                            <div class="button">
                                 <button name="Return">Return</button>
+                                <button name="Send">Send</button>
                             </div>
                         </div>
                     </div>
@@ -155,7 +156,6 @@
             </section>
             <section>
                 <h2 class= history>History</h2>
-                <img src="./Assets/History1.jpg" class="history-display">
                 <p class="history-display">
                     Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
                     tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
@@ -163,6 +163,7 @@
                     Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
                     Vestibulum ante ipsum primis sagittis eget. tempus euismod.
                 </p>
+                <img src="./Assets/History1.jpg" class="history-display">
                 <p class="history-display">
                     Lorem ipsum dolor sit accumsan interdum nisi, quis tincidunt felis sagittis eget.
                     tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
@@ -171,53 +172,50 @@
                 </p>
                 <img src="./Assets/History2.jpg" class="history-display">
             </section>
-            <div class="greenline">
-            </div>
-                <section>
-                    <div class="item-prod">
-                        <p class="item-prod-font">Products</p>
-                            <ol>
-                                <li>Funcionalities</li>
-                                <li>Donwloads</li>
-                                <li>Integrations</li>
-                                <li>Extras</li>
-                            </ol>    
-                    </div>
-                    <div class="item-prod">
-                        <p div class="item-prod-font">Company</p>
+            <section class="greenline-top">
+                <div class="item-prod">
+                    <p class="item-prod-font">Products</p>
                         <ol>
-                            <li>About Us</li>
-                            <li>Clients</li>
-                            <li>Resources</li>
-                            <li>Blog</li>
+                            <li>Funcionalities</li>
+                            <li>Donwloads</li>
+                            <li>Integrations</li>
+                            <li>Extras</li>
                         </ol>    
-                    </div>
-                    <div class="item-prod">
-                        <p div class="item-prod-font">Suport</p>
-                        <ol>
-                            <li>Help</li>
-                            <li>Tutorials</li>
-                            <li>API</li>
-                            <li>Contact</li>
-                        </ol>    
-                    </div>
-                </section>
-            </section> 
+                </div>
+                <div class="item-prod">
+                    <p div class="item-prod-font">Company</p>
+                    <ol>
+                        <li>About Us</li>
+                        <li>Clients</li>
+                        <li>Resources</li>
+                        <li>Blog</li>
+                    </ol>    
+                </div>
+                <div class="item-prod">
+                    <p div class="item-prod-font">Suport</p>
+                    <ol>
+                        <li>Help</li>
+                        <li>Tutorials</li>
+                        <li>API</li>
+                        <li>Contact</li>
+                    </ol>    
+                </div>
+            </section>
         </main>
         <div class="greenline">
         </div>
-        <footer >
-            <div align="center">
+        <footer>
+            <div class="icons">
                 <a title="Instagram" href="http://www.instagram.com"><img src="./Assets/ig.png" width="30" /></a>
                 <a title="Twitter" href="http://www.twitter.com"><img src="./Assets/tt.png" width="30" /></a>
                 <a title="Facebook" href="http://www.facebook.com"><img src="./Assets/fb.png" width="30" /></a>
                 <a title="Linkedin" href="http://www.linkedin.com"><img src="./Assets/linkedin.png" width="30" /></a>
                 <a title="GitHub" href="http://www.github.com"><img src="./Assets/github.png" width="30" /></a>
             </div>
-            <div align="center">
+            <div>
                 <img src="./Assets/logo.png">
             </div>
-            <div align="center">
+            <div>
                 <h4 class="paragraph-main">Rosario, Argentina</h4>
                 <h4 class="paragraph-main">Copyright © 2022 Radium Rocket. All rights reserved.</h4>
             </div>
