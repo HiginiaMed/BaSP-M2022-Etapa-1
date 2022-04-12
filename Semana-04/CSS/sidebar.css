@@ -2,7 +2,7 @@ aside {
   background-color: #DCDADA;
   padding: 5px;
   height: 100%;
-  width: 20%;
+  width: 22%;
   margin: 0px;
   padding-right: 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
@@ -16,12 +16,15 @@ aside {
 }
 
 .form-aside {
-  padding-left: 0px;
   background-color: #EBEBEB;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-aside input {
-  background-color: #DCDADA;
+  background-color: #EBEBEB;
   border: 1px solid #373867;
 }
 
@@ -50,4 +53,26 @@ p.menu {
 .greenline {
   border-bottom: solid 3px #AACE9B;
   padding-bottom: 30px;
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+}
+
+  /* tablet */
+@media screen and (min-width: 768px) {
+  aside {
+    display: none;
+  }
+}
+
+/* pc */
+@media screen and (min-width: 1024px) {
+  aside {
+    display: flex;
+    position: fixed;
+  }
 }

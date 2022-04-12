@@ -13,44 +13,40 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <div>
-            <header>
-                <img src="./Assets/logo.png" id="logo">
-                <label class="trackgenix">Trackgenix </label>
-            </header>
-        </div>
+        <header>
+            <img src="./Assets/logo.png" id="logo">
+            <label class="trackgenix">Trackgenix </label>
+        </header>
         <aside>
-        <section class="container">
-                <div class="form-aside">
-                    <form>
-                        <input type="text" placeholder="Search..">
-                    </form>
-                </div>
-                <div>
-                    <span class="menu">Menu</span>
-                    <ul>
-                        <li class="sidebar"><a href="https://www.figma.com/">Home</a></li>
-                        <li class="sidebar"><a href="https://www.figma.com/">Sign up</a></li>
-                        <li class="sidebar" ><a href="https://www.figma.com/">Log in</a></li>
-                        <li class="sidebar" id="bold"><a href="https://www.figma.com/">Contact information</a></li>
-                    <p class="sidebar-par">
-                        Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
-                        ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
-                        Sed nulla amet lorem feugiat tempus aliquam.
-                    </p>
-                    <p class="sidebar">
-                        <img src="./Assets/mail.png"> 
-                        <a href="https://www.gmail.com/">information@untitled.tld</a>
-                    </p>
-                    <p class="sidebar">
-                        <img src="./Assets/addres.png"> 
-                        <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
-                    </p>
-                </div>
-            </aside>
-        </section>
+            <div class="form-aside">
+                <form>
+                    <input type="text" placeholder="Search..">
+                </form>
+            </div>
+            <div>
+                <span class="menu">Menu</span>
+                <ul>
+                    <li class="sidebar"><a href="https://www.figma.com/">Home</a></li>
+                    <li class="sidebar"><a href="https://www.figma.com/">Sign up</a></li>
+                    <li class="sidebar" ><a href="https://www.figma.com/">Log in</a></li>
+                    <li class="sidebar" id="bold"><a href="https://www.figma.com/">Contact information</a></li>
+                <p class="sidebar-par">
+                    Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
+                    ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
+                    Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+                <p class="sidebar">
+                    <img src="./Assets/mail.png"> 
+                    <a href="https://www.gmail.com/">information@untitled.tld</a>
+                </p>
+                <p class="sidebar">
+                    <img src="./Assets/addres.png"> 
+                    <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
+                </p>
+            </div>
+        </aside>
         <div>
-            <a href="https://www.figma.com/"><img src="./Assets/hamb.jpg" id="hamb"></a>
+            <a href="https://www.figma.com/"><img src="./Assets/hamb.jpg" id="hamb" alt="Burger menu"></a>
         </div>
         <main>
             <h1>Trackgenix S.A.</h1>
@@ -72,16 +68,14 @@
             </section>
             <div>
                 <h2 class="greenline-top">Functionalities</h2>
-                <section class="items">
-                    <div>
-                        <input type="number" name="hours" placeholder="°Hours log">
-                        <input type="text" name="Reports" placeholder="°Reports">
-                    </div>
-                    <div>
-                        <input type="text" name="Resource management" placeholder="°Resource management">
-                        <input type="text" name="role" placeholder="°Multiple roles">
-                    </div>
-                </section>
+                <div class="container-functionalities">
+                    <input type="number" name="hours" placeholder="°Hours log" class="items">
+                    <input type="text" name="Reports" placeholder="°Reports" class="items">
+                </div>
+                <div class="container-functionalities">
+                    <input type="text" name="Resource management" placeholder="°Resource management" class="items">
+                    <input type="text" name="role" placeholder="°Multiple roles" class="items">
+                </div>
             </div>
             <div>
                 <h2 class="greenline-top">Why use Trackgenix?</h2>
@@ -114,47 +108,45 @@
             </div>
             <div>
                 <h2 class="greenline-top">Form</h2>
-                <form class="form-marg">
-                    <div>
-                        <div class="form1">
+                <form class="form-container">
+                    <section class="form-section">
+                        <p>
                             <input type="text" id="name" name="name" required minlength="4" 
-                            maxlength="10" size="30" placeholder="Name">
-                        </div>
-                        <div class="form1">
+                            maxlength="10" size="30" placeholder="Name" class="items-form">
+                        </p>
+                        <p>
                             <input type="text" id="email" name="email" required minlength="4" 
-                            maxlength="30" size="30" placeholder="Email">
-                        </div>
-                        <h3>Contact Area:</h3>
-                        <div class="formca">
-                            <div>
+                            maxlength="30" size="30" placeholder="Email" class="items-form">
+                        </p>
+                        <div class="form-section">
+                            <h3 class="formca">Contact Area:</h3>
+                            <div id="input-form">
                                 <input type="checkbox" id="cbox1" value="first_checkbox">
                                 <label for="cbox1">Human resources</label>
                             </div>
-                            <div>
+                            <div id="input-form">
                                 <input type="checkbox" id="cbox2" value="second_checkbox"> 
                                 <label for="cbox2">Systems</label>
                             </div>
-                            <div>
+                            <div id="input-form">
                                 <input type="checkbox" id="cbox3" value="third_checkbox"> 
                                 <label for="cbox3">Commercialization</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="form2">
-                        <p>
-                            Message
-                        </p>
+                    </section>
+                    <section class="form-section">
+                        <p class="formca">Message</p>
                         <input type="text" id="message" name="message" required minlength="4" maxlength="200" 
-                        size="1120" placeholder="Message" class="form2">
-                    </div>
-                    <div>
-                        <div id="center">
-                            <button class="button" name="Return">Return</button>
+                        size="1120" placeholder="Message" id="message">
+                        <div id="form-buttons-container">
+                            <div id="center">
+                                <button class="button" name="Return">Return</button>
+                            </div>
+                            <div id="center">
+                                <button class="button" name="Send">Send</button>
+                            </div>
                         </div>
-                        <div id="center">
-                            <button class="button2" name="Send">Send</button>
-                        </div>
-                    </div>
+                    </section>
                 </form>
             </div>
             <div>
@@ -176,6 +168,7 @@
                             tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum.
                             Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus.
                             Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod.
+                            Vestibulum ante ipsum primis sagittis eget. tempus euismod.
                         </p>
                         <img src="./Assets/History2.jpg" class="history-display">
                     </div>
@@ -183,36 +176,36 @@
             </div>
             <div>
                 <div class="greenline-top">
-                    <div class="container-p">
-                        <div class="item-prod">
-                            <p class="item-prod-font">Products</p>
-                            <ol>
-                                <li>Funcionalities</li>
-                                <li>Donwloads</li>
-                                <li>Integrations</li>
-                                <li>Extras</li>
-                            </ol>
-                        </div>
-                        <div class="item-prod">
-                                <p div class="item-prod-font">Company</p>
-                                <ol>
-                                    <li>About Us</li>
-                                    <li>Clients</li>
-                                    <li>Resources</li>
-                                    <li>Blog</li>
-                                </ol>    
-                        </div>
-                        <div class="item-prod">
-                            <p div class="item-prod-font">Suport</p>
-                            <ol>
-                                <li>Help</li>
-                                <li>Tutorials</li>
-                                <li>API</li>
-                                <li>Contact</li>
-                            </ol>    
-                        </div>
-                    </div>
                 </div>
+                <label class="container-p">
+                    <div class="item-prod">
+                        <p class="item-prod-font">Products</p>
+                        <ol>
+                            <li>Funcionalities</li>
+                            <li>Donwloads</li>
+                            <li>Integrations</li>
+                            <li>Extras</li>
+                        </ol>
+                    </div>
+                    <div class="item-prod">
+                            <p div class="item-prod-font">Company</p>
+                            <ol>
+                                <li>About Us</li>
+                                <li>Clients</li>
+                                <li>Resources</li>
+                                <li>Blog</li>
+                            </ol>    
+                    </div>
+                    <div class="item-prod">
+                        <p div class="item-prod-font">Suport</p>
+                        <ol>
+                            <li>Help</li>
+                            <li>Tutorials</li>
+                            <li>API</li>
+                            <li>Contact</li>
+                        </ol>    
+                    </div>
+                </label>
             </div>
         </main>
         <div class="greenline">
