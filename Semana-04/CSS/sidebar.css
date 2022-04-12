@@ -8,13 +8,15 @@ aside {
     flex-direction: column;
     position: fixed;
     background-color: #DCDADA;
-    padding: 5px;
     height: 100%;
-    width: 200px;
+    width: 250px;
     margin: 0px;
-    padding-right: 10px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .sidebar a:hover {
+      color: #AACE9B;
   }
   
   .aside li {
@@ -22,11 +24,12 @@ aside {
   }
   
   .search {
-    background-color: #EBEBEB;
-    height: 80px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: #EBEBEB;
   }
   
   .search input {
@@ -36,6 +39,7 @@ aside {
   }
   
   .menu {
+    padding: 10px;
     font-size: 30px;
     font-weight: bold;
     text-decoration: underline 4px;
@@ -47,18 +51,14 @@ aside {
   }
   
   .sidebar {
+    padding: 10px;
     border-bottom: 1px solid #AACE9B;
-    line-height: 3;
     color: black;
   }
   
   .sidebar-par {
     color: #958888;
     line-height: 1.5;
-  }
-  
-  .greenline {
-    border-bottom: solid 3px #AACE9B;
-    padding-bottom: 30px;
+    margin: 10px;
   }
 }

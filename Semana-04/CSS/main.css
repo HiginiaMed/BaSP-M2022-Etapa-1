@@ -152,6 +152,11 @@ h3 {
   margin-left: 25%;
 }
 
+.button:hover {
+  background: #AACE9B;
+  color: #fff !important;
+}
+
 .history {
   margin-top: 30px;
   border-top: solid 3px #AACE9B;
@@ -249,7 +254,7 @@ h3 {
     width: 40%;
   }
   main{
-    margin-left: 280px;
+    margin-left: 300px;
     margin-top: 150px;
   }
 }

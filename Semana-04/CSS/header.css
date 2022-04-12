@@ -28,9 +28,9 @@ header {
 /* pc */
 @media screen and (min-width: 1024px) {
   header {
-    width: calc(100% - 200px); 
+    width: calc(100% - 250px); 
     top: 0;
-    margin-left: 200px;
+    margin-left: 250px;
     position: fixed;
   }
 }
