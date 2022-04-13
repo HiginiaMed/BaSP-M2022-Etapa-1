@@ -7,3 +7,36 @@ body {
   margin: 0px;
   padding: 0px;
 }
+
+.greenline-top {
+  border-top: solid 3px #AACE9B;
+  margin-top: 20px;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 10px;
+  margin-bottom: 10px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 38px;
+  font-weight: 450;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+

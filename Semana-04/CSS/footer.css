@@ -19,8 +19,6 @@ h4 {
   padding-bottom: 15px;
 }
 
-
-/* pc */
 @media screen and (min-width: 1024px) {
   footer {
     margin-left: 220px;
