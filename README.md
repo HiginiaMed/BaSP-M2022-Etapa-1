@@ -58,6 +58,17 @@ target="_blank">GitHub Pages: Maria Higinia Medica</a>
 
 - <a href="https://youtu.be/sNBNvIWiRWs" target="_blank">Guía definitiva de Flexbox [YouTube Video]</a>
 
+# Week-05
+This week we had to edit the landing page with the last corrections. 
+And also we had to practice <i>Javascript</i>. 
+
+## Tutorials
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68TYu8hB4NG4pWUIJpRXA8dm" target="_blank">Fundamentos de Programación en JavaScript, Udemy [YouTube Video]</a>
+  
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68Qg7airyFpWQFP-Abxnvk-y" target="_blank">JavaScript - Sentencias y bucles, Udemy [YouTube Video]</a>
+
+- <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68R2r0JyrYD1m9a14ahL_Ywh" target="_blank">JavaScript - Arreglos y objetos, Udemy [YouTube Video]</a>
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
