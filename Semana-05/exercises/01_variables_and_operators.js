@@ -33,6 +33,7 @@ console.log('-Exercise 1.c:');
  var stringTwo = 'Rocket';
 
  var lenght = stringOne.length + stringTwo.length;
+ 
 
  console.log (lenght)
 
