@@ -1,22 +1,22 @@
 footer {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.icons, a {
+.icons {
   padding-bottom: 25px;
   padding-left: 15px;
 }
 
 h4 {
-  color: #958888;
+  padding-bottom: 15px;
   font-size: 14px;
   font-weight: normal;
-  padding-bottom: 15px;
+  color: #958888;
 }
 
 @media screen and (min-width: 1024px) {
