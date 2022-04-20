@@ -8,7 +8,7 @@ console.log('-Exercise 5.a:');
 var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
 for (var i = 0; i < 5; i++) {
-    console.log(days[i]);
+    alert(days[i]);
 }
 
 /*b. Al array anterior convertir la primera letra de cada palabra en mayúscula
@@ -19,7 +19,7 @@ console.log('-Exercise 5.b:');
 for (var b = 0; b < 5; b++) {
     var day = days[b];
     var daysMayus = (day.toUpperCase()).substring(0,1) + (day.toLowerCase()).substring(1);
-    console.log(daysMayus);
+    alert(daysMayus);
 }
 
 /*c. Crear una variable llamada “sentence” que tenga un string vacío, 
@@ -34,7 +34,7 @@ for (var c = 0; c < 5; c++) {
     sentence += days[c] + ' ';
 }
 
-console.log(sentence);
+alert(sentence);
 
 /*d. Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número de la repetición,
 es decir que al final de la ejecución del bucle for debería haber 10 elementos dentro del array,

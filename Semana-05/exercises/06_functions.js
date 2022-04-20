@@ -57,7 +57,7 @@ En caso que haya decimales mostrar un alerta con el error y retorna el número c
 
 console.log('-Exercise 6.d:');
 
-function suma(numA, numB) {
+function suma1(numA, numB) {
 	if (typeof(numA) != 'number' || typeof(numB) != 'number'){
 		alert('One (or both) of the parameters is not a number');
 		return NaN;
@@ -74,12 +74,14 @@ function suma(numA, numB) {
 	return numA + numB;
 }
 
-var resultInt = suma(10, 20); 
-var resultFloatsA = suma(3.7, 8);
-var notResult = suma('nn', 2)
+var resultInt = suma1(10, 20); 
+var resultFloatsA = suma1(3.7, 8);
+var resultFloatsB = suma1(40, 9.2);
+var notResult = suma1('nn', 2)
 
 console.log('Result integer:', resultInt);
 console.log('Result with floats:', resultFloatsA);
+console.log('Result with floats:', resultFloatsB);
 console.log('Result with string:', notResult);
 
 /*e. Convertir la validación del ejercicio 6d) en una función separada
@@ -91,21 +93,30 @@ function integerValidator(newNum) {
 	return validateInteger(newNum) ? newNum : Math.round(newNum);
 }
 
-function suma(numA, numB) {
+function suma2(numA, numB) {
 	if (typeof(numA) != 'number' || typeof(numB) != 'number'){
 		alert('One (or both) of the parameters is not a number');
 		return NaN;
 	}
+	if (!validateInteger(numA)) {
+		alert(`${numA} is not an integer`);
+	}
+	if (!validateInteger(numB)) {
+		alert(`${numB} is not an integer`);
+	}
+
 	numA = integerValidator(numA);
 	numB = integerValidator(numB);
 
 	return numA + numB;
 }
 
-var resultInt2 = suma(10, 20); 
-var resultFloatsA2 = suma(3.7, 8);
-var notResult2 = suma('nn', 2)
+var resultInt2 = suma2(10, 20); 
+var resultFloatsA2 = suma2(3.7, 8);
+var resultFloatsB2 = suma2(40, 9.2);
+var notResult2 = suma2('nn', 2)
 
 console.log('Result Integer:', resultInt2);
 console.log('Result with floats:', resultFloatsA2);
+console.log('Result with floats:', resultFloatsB2);
 console.log('Result with string:', notResult2);
