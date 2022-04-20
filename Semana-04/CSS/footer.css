@@ -18,9 +18,3 @@ h4 {
   font-weight: normal;
   color: #958888;
 }
-
-@media screen and (min-width: 1024px) {
-  footer {
-    margin-left: 220px;
-  }
-}

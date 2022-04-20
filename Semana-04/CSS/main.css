@@ -250,7 +250,10 @@ div.first-par{
   }
   
   main{
-    margin-left: 300px;
     margin-top: 150px;
   }
+}
+
+.container {
+  margin-left: 250px
 }
