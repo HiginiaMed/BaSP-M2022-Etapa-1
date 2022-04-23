@@ -1,0 +1,259 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 10px;
+  color: #000;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3%;
+  font-size: 38px;
+  font-weight: 450;
+}
+
+h3 {
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::placeholder { color: #34636E; }
+
+#hamb {
+  display: flex;
+  align-items: flex-start;
+  width: 30px;
+  padding: 20px;
+}
+
+div.first-par{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#reloj {
+  padding-top: 0px;
+}
+
+.paragraph-main {
+  width: 100%;
+  padding-bottom: 20px;
+  color: #958888;
+}
+
+.items {
+  width: 90%;
+  height: 40px;
+  margin: 0 0px 80px 10px;
+  padding-left: 8px;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Roboto Slab, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: #373867;
+}
+
+.items-w{
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+  padding: 5px;
+}
+
+.formca {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #373867;
+}
+
+#input-form {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 70px;
+  font-weight: bold;
+}
+
+.form2 {
+  width:100%;
+  height: 20px;
+  padding-bottom: 100px;
+}
+
+.form-section {
+  margin-right: 40px;
+}
+
+.items-form {
+  width: 80%;
+  height: 40px;
+  margin: 0 0px 20px 0px;
+  padding-left: 8px;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Roboto Slab, Oxygen, Ubuntu, Cantarell,
+  'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #958888;
+}
+
+#message {
+  width: 80%;
+  height: 70px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 13px;
+  color: #373867;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;  
+}
+
+.button {
+  width: 144px;
+  height: 40px;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-left: 25%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: #AACE9B;
+  color: #fff !important;
+}
+
+.history {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  border-top: solid 3px #AACE9B;
+  padding-bottom: 30px;
+}
+
+.history-display {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.item-prod {
+  width: 100%;
+  padding: 5%;
+  font-size: 20px;
+  color: #958888;
+}
+
+.item-prod-font {
+  padding: 3%;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: black;
+}
+
+@media screen and (min-width: 768px) {
+  h1, h2, section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .first-par {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #reloj {
+    margin-top: 70px;
+    height: 260px;
+  }
+
+  .paragraph-main {
+    width: 90%;
+  }
+
+  .container-functionalities {
+    display: flex;
+    justify-content: center;
+  }
+
+  .items-w, .form-marg, .container-h {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-h > div:first-child {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-right: 20px;
+  }
+
+  .container-h > div:last-child {
+    margin-left: 20px;
+  }
+
+  #form-buttons-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container-p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main{
+    margin-top: 150px;
+  }
+  
+  #hamb {
+    display: none;
+  }
+
+  .items {
+    width: 40%;
+  }
+
+  #container {
+    margin-left: 250px
+  }
+}
