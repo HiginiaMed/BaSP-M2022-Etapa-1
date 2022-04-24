@@ -12,7 +12,6 @@
         <link rel="stylesheet" href="../styles/footer.css">
         <link rel="stylesheet" href="../styles/style.css">
         <link rel="stylesheet" href="../styles/login.css">
-        <link rel="stylesheet" href="../styles/sign-up.css">
     </head>
     <body>
         <aside>
@@ -49,11 +48,23 @@
                 <label class="trackgenix">Trackgenix </label>
             </header>
             <a href="https://www.figma.com/"><img src="../assets/hamb.jpg" id="hamb" alt="Burger menu"></a>
-            <main>
-                <div class="log">
-                    <p>Log In</p>
+            <section>
+                <div class="login-container">
+                    <h1>Log In</h1>
+                    <form class="form-container">
+                        <input type="text" class="login-input" placeholder="Email">
+                        <input type="password" class="login-input" placeholder="Password">
+                        <div id="remember-me-container">
+                            <input type="checkbox" id="remember-me" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button class="continue-button" value="Continue">Continue</button>
+                        <p id="forgot"><a href="#">Forgot password?</a></p>
+                        <p class="signup">Don't have an account? 
+                        <a class="signup" href="./sign-up.html">Sign up now</a></p>
+                    </form>
                 </div>
-            </main>
+            </section>
         </div>
     </body>
 </html>

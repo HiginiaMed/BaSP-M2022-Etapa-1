@@ -28,7 +28,7 @@ header {
 @media screen and (min-width: 1024px) {
   header {
     position: fixed;
-    width: 780px; 
+    width: 82%; 
     top: 0;
   }
 }
