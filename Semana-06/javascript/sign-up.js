@@ -162,25 +162,21 @@ inputDni.addEventListener('focus', function() {
     errorLineMsg.style.border = '#fff';
 })
 
-//Fecha de Nacimiento: Con formato dd/mm/aaaa. +18 (como poner que quede +18? y que no puede fecha futura?)
+//Fecha de Nacimiento: Con formato dd/mm/aaaa.
 
-function validateDate(dateToCheck) {
-  var [year, month, day] = dateToCheck.split("-");
-  var isoFormattedStr = `${day}/${month}/${year}`;
-  var date = new Date(isoFormattedStr);
-  var timestamp = date.getTime();
-  if (typeof timestamp !== "number" || Number.isNaN(timestamp))
-  {
+function validateDate() {
+  if (new Date(inputDate.value).getTime() > new Date().getTime()) {
       return false;
+  } else {
+      return true;
   }
-  return  isoFormattedStr;
 }
 
 var resultDate = false;
 
-inputDate.addEventListener('blur', function(e) {
+inputDate.addEventListener('blur', function() {
     var message = document.getElementById('result-date');
-    resultDate = validateDate(dateToCheck);
+    resultDate = validateDate();
     if (resultDate) {
       document.getElementById('result-date').innerHTML = 'Valid date';
       message.style.display = 'flex';
@@ -247,7 +243,12 @@ inputPhone.addEventListener('focus', function() {
     errorLineMsg.style.border = '#fff';
 })
   
-// Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio. como poner el espacio?
+/* Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio. como poner el espacio?
+En cuando a lo del address, podemos chequear en ese value del input usando substring, dividiendolo en dos partes, 
+primero desde que arranca hasta el index of del espacio en blanco, y lo mismo para la otra parte, 
+desde el index hasta el value.length
+15:51
+Y ahí chequeamos la primera parte que sea string y la segunda numeros*/
 
 function validateAddress(e) {
     var address = e.target.value;
@@ -482,10 +483,10 @@ function corroboratePass() {
 
 var resultConfPassword = false;
 
-inputConfPassword.addEventListener('blur', function(e) {
+inputConfPassword.addEventListener('blur', function() {
     var messagePass = document.getElementById('result-conf-password');
-    resultPassConf = corroboratePass();
-    if (resultPassConf) {
+    resultConfPassword = corroboratePass();
+    if (resultConfPassword) {
       document.getElementById('result-conf-password').innerHTML = 'Valid Password';
       messagePass.style.display = 'flex';
       messagePass.style.marginLeft = '30px';
