@@ -40,15 +40,15 @@ inputEmail.addEventListener('focus', function() {
 
 //validate password
 
-function validatePass(i) {
-  var password = i.target.value;
+function validatePass(e) {
+  var password = e.target.value;
   var numbers = '0123456789';
   var letters = 'abcdefghijklmnopqrstuvwxyz';
   var lettersAndNumbers = numbers + letters;
   var arrayPass = password.toLowerCase().split('');
   var includesNumbers = arrayPass.some((c) => numbers.includes(c));
   var includesLetters = arrayPass.some((c) => letters.includes(c));
-  var isValidChar = arrayPass.every((c) => lettersAndNumbers.includes(c));
+  var isValidChar = arrayPass.every((c) => lettersAndNumbers.includes(c));    
   if (includesNumbers && includesLetters && isValidChar) {
       return true;
   } else {
@@ -59,9 +59,9 @@ function validatePass(i) {
 var resultPass = false;
 
 
-inputPass.addEventListener('blur', function(i) {
+inputPass.addEventListener('blur', function(e) {
   var messagePass = document.getElementById('result-password');
-  resultPass = validatePass(i);
+  resultPass = validatePass(e);
   if (resultPass) {
     document.getElementById('result-password').innerHTML = 'Valid Password';
     messagePass.style.display = 'flex';
@@ -77,10 +77,10 @@ inputPass.addEventListener('blur', function(i) {
   }
 })
 
-inputEmail.addEventListener('focus', function() {
-  let errorPass = document.getElementById('result-password');
+inputPass.addEventListener('focus', function() {
+  var errorPass = document.getElementById('result-password');
   errorPass.style.display = 'none';
-  let errorLinePass = document.getElementById('password-input');
+  var errorLinePass = document.getElementById('password-input');
   errorLinePass.style.borderBottom = '#fff';
 })
 
@@ -92,10 +92,10 @@ btnLogIn.addEventListener("click", () => windowLogIn());
 
 function windowLogIn()
 { console.log (result +'+'+ resultPass)
-  if(result && resultPass){
-      alert('E-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value)
-  } else {
-      alert('Something went wrong!')
+    if(result && resultPass){
+        alert('E-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value)
+    } else {
+        alert('Something went wrong!')
     }
 }
 

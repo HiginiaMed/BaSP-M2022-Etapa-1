@@ -69,6 +69,18 @@ And also we had to practice <i>Javascript</i>.
 
 - <a href="https://www.youtube.com/playlist?list=PLEfmn-5Ho68R2r0JyrYD1m9a14ahL_Ywh" target="_blank">JavaScript - Arreglos y objetos, Udemy [YouTube Video]</a>
 
+# Week-06
+This week we had to create with html and css the Sign Up and Log In pages.
+Then we have to start to validate the differents inputs in both pages with <i>Javascript</i>.
+Also we create alerts and interactions between those pages. We learn and edit with DOM system.
+
+## Tutorials
+- <a href="https://youtu.be/Wd_IxG7lOP8" target="_blank">JavaScript DOM, TraversyMedia [YouTube Video]</a>
+  
+- <a href="https://www.digitalocean.com/community/tutorials/como-modificar-atributos-clases-y-estilos-en-el-dom-es" target="_blank">Cómo modificar el DOM [tutorial]</a>
+
+- <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Introduction to events [article]</a>
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
