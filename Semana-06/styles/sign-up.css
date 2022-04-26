@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 60%;
     padding: 10px;
     background-color: #AFAFC2;
     border-radius: 30px;
@@ -40,10 +40,10 @@
     width: 90%;
     padding: 10px;
     background: #AFAFC2;
-    border-bottom: 1.05px solid #000;
-    border-radius: 0;
+    border: 1.05px solid #000;
+    border-radius: 5px;
     padding-left: 8px;
-    margin-top: 10px;
+    margin: 20px;
   }
   
   .continue-button {
