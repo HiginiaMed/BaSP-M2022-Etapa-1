@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 80%;
     padding: 10px;
     background-color: #AFAFC2;
     border-radius: 30px;
@@ -81,5 +81,8 @@
     }
     .signup-container {
         width: 90%;
-      }
+    }
+    .signup-container {
+      width: 50%;
+    }
   }

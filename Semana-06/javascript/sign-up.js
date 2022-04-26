@@ -55,7 +55,7 @@ inputName.addEventListener('blur', function(e) {
     var message = document.getElementById('result-name');
     resultName = validateName(e);
     if (resultName) {
-      document.getElementById('result-name').innerHTML = 'Valid Name';
+      document.getElementById('result-name').innerHTML = 'Valid name';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#ffffff';
@@ -477,8 +477,8 @@ function corroboratePass() {
     console.log("valor1", inputPass.value);
     console.log("valor2", inputConfPassword.value);
     if (inputPass.value == inputConfPassword.value){
-        return console.log('string paso por aca');
-    }return console.log('no entro');
+      return true;
+    }return false;
 }
 
 var resultConfPassword = false;
@@ -523,10 +523,11 @@ function windowSignUp()
 resultAddress + '+' + resultCity + '+' + resultZip + '+' + resultEmail +'+'+ resultPass + '+' + resultConfPassword)
   if(resultName && resultSurname && resultDni && resultDate && resultPhone && resultAddress && resultCity && 
     resultZip && resultEmail && resultPass && resultConfPassword){
-      alert('Name: ' + inputName +  '\nSurname: ' + inputSurname + '\nDNI: ' + inputDni + 
-      '\nDate of birth: ' + inputDate + '\nPhone: ' + inputPhone + '\nAddress: ' + inputAddress + '\nCity: ' + inputCity + 
-      '\nZip code: ' + inputZip + '\nE-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value + 
-      '\nConfirm password:' + inputConfPassword)
+      alert('Name: ' + inputName.value +  '\nSurname: ' + inputSurname.value + '\nDNI: ' + inputDni.value + 
+      '\nDate of birth: ' + inputDate.value + '\nPhone: ' + inputPhone.value + 
+      '\nAddress: ' + inputAddress.value + '\nCity: ' + inputCity.value + 
+      '\nZip code: ' + inputZip.value + '\nE-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value + 
+      '\nConfirm password:' + inputConfPassword.value)
   } else {
       alert('Something went wrong!')
     }
