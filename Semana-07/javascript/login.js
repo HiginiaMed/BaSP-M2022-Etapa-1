@@ -11,18 +11,6 @@ function validateEmail(e) {
   }
 }
 
-fetch("https://basp-m2022-api-rest-server.herokuapp.com/login?email=rose@radiumrocket.com&password=BaSP2022")
-  .then(function (response) {
-    console.log("Response: ", response);
-    return response.json();
-  })
-  .then(function (jsonResponse){
-    console.log(jsonResponse);
-  })
-  .catch(function (error){
-    console.log("Error: ", error);
-  })
-
 var result = false;
 
 inputEmail.addEventListener('blur', function(e) {
@@ -105,31 +93,18 @@ btnLogIn.addEventListener("click", () => windowLogIn());
 function windowLogIn()
 { console.log (result +'+'+ resultPass)
     if(result && resultPass){
-        alert('E-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value)
+         fetch("https://basp-m2022-api-rest-server.herokuapp.com/login".concat("?email=", inputEmail.value, "&password=", inputPass.value))
+          .then(function (response) {
+            if(response.ok) {
+              return alert('Log in succes' + '\n' + inputEmail.value + inputPass.value)
+            } else {
+              return alert('Log in failed')
+            }
+          })
+          .catch(function (error){
+            console.log("Error: ", error);
+          })
     } else {
         alert('Something went wrong!')
     }
 }
-
-
-/* const btnLogIn = document.getElementById('btn');
-
-
-btnLogIn.addEventListener("click", () => windowLogIn());
-
-function windowLogIn()
-{ console.log (result +'+'+ resultPass)
-  if(result && resultPass){
-    Swal.fire({
-      icon: 'success',
-      title: 'Your work has been saved',
-      text: 'E-mail: + inputMail.value',
-      text: 'Password: + inputPass.value',
-      showConfirmButton: true,  })}
-      else {Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Something went wrong!',
-        })
-    }
-} */
