@@ -81,6 +81,20 @@ Also we create alerts and interactions between those pages. We learn and edit wi
 
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" target="_blank">Introduction to events [article]</a>
 
+# Week-07
+This time we learn about backend and frontend. Knowing that we can understand about APIs, promises, callback.
+Then we have to follow edition the week-06 problematic, adding request in the form and add alerts if it is right or not.
+
+## Tutorials
+- <a href="https://youtu.be/sgyNnQIgmLI" target="_blank">¿Qué es BACKEND y FRONTEND? [YouTube Video]</a>
+  
+- <a href="https://youtu.be/wxB8CVkSrAQ" target="_blank">¿Qué son las APIs y para qué sirven? [YouTube Video]</a>
+
+- <a href="https://youtu.be/nxG1v2UjTdQ" target="_blank">Asincronismo en Javascript [YouTube Video]</a>
+
+- <a href="https://youtu.be/aYWObkKz-Og" target="_blank">¿Qué es un callback en JavaScript? [YouTube Video]</a>
+
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 

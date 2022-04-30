@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trackgenix</title>
+        <link rel="stylesheet" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
+        <link rel="stylesheet" href="../styles/landing.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/login.css">
+    </head>
+    <body>
+        <aside>
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search..">
+                </form>
+            </div>
+            <div>
+                <span class="menu">Menu</span>
+                <ul>
+                    <li class="sidebar"><a href="./index.html">Home</a></li>
+                    <li class="sidebar"><a href="./sign-up.html">Sign up</a></li>
+                    <li class="sidebar" ><a href="./login.html">Log in</a></li>
+                    <li class="sidebar" id="bold"><a href="https://www.figma.com/">Contact information</a></li>
+                <p class="sidebar-par">
+                    Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus,
+                    ac varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum.
+                    Sed nulla amet lorem feugiat tempus aliquam.
+                </p>
+                <p class="sidebar">
+                    <img src="../assets/mail.png"> 
+                    <a href="https://www.gmail.com/">information@untitled.tld</a>
+                </p>
+                <p class="sidebar">
+                    <img src="../assets/addres.png"> 
+                    <a href="https://www.google.com.ar/maps">1234 Somewhere Road #8254 Nashville, TN 00000-0000</a>
+                </p>
+            </div>
+        </aside>
+        <div id="container">
+            <header>
+                <img src="../assets/logo.png" id="logo">
+                <label class="trackgenix">Trackgenix </label>
+            </header>
+            <a href="https://www.figma.com/"><img src="../assets/hamb.jpg" id="hamb" alt="Burger menu"></a>
+            <section>
+                <div class="login-container">
+                    <h1>Log In</h1>
+                    <form class="form-container">
+                        <input type="text" id="email-input" placeholder="Email">
+                        <p id="result-email"></p>
+                        <input type="password" id="password-input" placeholder="Password">
+                        <p id="result-password"></p>
+                        <div id="remember-me-container">
+                            <input type="checkbox" id="remember-me" name="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type= "button" class="continue-button" value="Log In" id="btn">Log In</button>
+                        <p id="forgot"><a href="#">Forgot password?</a></p>
+                        <p class="signup">Don't have an account? 
+                        <a class="signup" href="./sign-up.html">Sign up now</a></p>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+    <script src="../javascript/login.js"></script>
+</html>
