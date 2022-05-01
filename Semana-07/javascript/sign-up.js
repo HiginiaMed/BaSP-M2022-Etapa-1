@@ -1,5 +1,5 @@
 var inputName = document.getElementById('name-input');
-var inputSurname = document.getElementById('surname-input');
+var inputLastName = document.getElementById('surname-input');
 var inputDni = document.getElementById('dni-input');
 var inputDate = document.getElementById('date-input');
 var inputPhone = document.getElementById('phone-input');
@@ -92,7 +92,7 @@ function validateSurname(e) {
 
 var resultSurname = false;
 
-inputSurname.addEventListener('blur', function(e) {
+inputLastName.addEventListener('blur', function(e) {
     var message = document.getElementById('result-surname');
     resultSurname = validateSurname(e);
     if (resultSurname) {
@@ -114,7 +114,7 @@ inputSurname.addEventListener('blur', function(e) {
     }
 })
   
-inputSurname.addEventListener('focus', function() {
+inputLastName.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-surname');
     errorMsg.style.display = 'none';
     var errorLineMsg = document.getElementById('surname-input');
@@ -164,12 +164,20 @@ inputDni.addEventListener('focus', function() {
 
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
 
-function validateDate() {
-  if (new Date(inputDate.value).getTime() > new Date().getTime()) {
+function validateDate(dateToCheck) {
+  var [year, month, day] = dateToCheck.split('-');
+  var isoFormattedStr = `${month}/${day}/${year}`;
+  var date = new Date(isoFormattedStr);
+  var timestamp = date.getTime();
+  if (typeof timestamp !== "number" || Number.isNaN(timestamp))
+  {
       return false;
-  } else {
-      return true;
   }
+  else if (new Date(inputDate.value).getTime() > new Date().getTime())
+  {
+      return false;
+  }
+  return  isoFormattedStr;
 }
 
 var resultDate = false;
@@ -177,6 +185,7 @@ var resultDate = false;
 inputDate.addEventListener('blur', function() {
     var message = document.getElementById('result-date');
     resultDate = validateDate();
+    console.log(inputDate.value)
     if (resultDate) {
       document.getElementById('result-date').innerHTML = 'Valid date';
       message.style.display = 'flex';
@@ -518,17 +527,56 @@ const btnSignUp = document.getElementById('btn');
   
 btnSignUp.addEventListener("click", () => windowSignUp());
 
-function windowSignUp()
-{ console.log (resultName + '+' + resultSurname + '+' + resultDni + '+' + resultDate + '+' + resultPhone + '+' + 
-resultAddress + '+' + resultCity + '+' + resultZip + '+' + resultEmail +'+'+ resultPass + '+' + resultConfPassword)
+function windowSignUp(){
   if(resultName && resultSurname && resultDni && resultDate && resultPhone && resultAddress && resultCity && 
     resultZip && resultEmail && resultPass && resultConfPassword){
-      alert('Name: ' + inputName.value +  '\nSurname: ' + inputSurname.value + '\nDNI: ' + inputDni.value + 
-      '\nDate of birth: ' + inputDate.value + '\nPhone: ' + inputPhone.value + 
-      '\nAddress: ' + inputAddress.value + '\nCity: ' + inputCity.value + 
-      '\nZip code: ' + inputZip.value + '\nE-mail: ' + inputEmail.value + '\nPassword: ' + inputPass.value + 
-      '\nConfirm password:' + inputConfPassword.value)
+      fetch("https://basp-m2022-api-rest-server.herokuapp.com/signup".concat("?name=", inputName.value, 
+      "&lastName=", inputLastName.value, "&dni=", inputDni.value, "&dob=", inputDate.value,
+      "&phone=", inputPhone.value, "&address=", inputAddress.value, "&city=", inputCity.value, "&zip=", inputZip.value,
+      "&email=", inputEmail.value, "&password=", inputPass.value))
+        .then(function(response){
+          return response.json();
+        })
+        .then(function(jsonResponse) {
+          if(jsonResponse.ok) {
+            return alert('Sign up succes' + '\n' + inputName.value + '\n' + inputLastName.value + '\n' + inputDni.value + 
+            '\n' + inputDate.value + '\n' + inputPhone.value + '\n' + inputAddress.value + '\n' + inputCity.value + 
+            '\n' + inputZip.value + '\n' + inputEmail.value + '\n' + inputPass.value + '\n' + inputConfPass.value)
+          } 
+          else if (jsonResponse.ok) {
+            localStorage.setItem("name", jsonResponse.data.name);
+            localStorage.setItem("lastname", jsonResponse.data.lastName);
+            localStorage.setItem("dni", jsonResponse.data.dni);
+            localStorage.setItem("dob", jsonResponse.data.dob);
+            localStorage.setItem("phone", jsonResponse.data.phone);
+            localStorage.setItem("address", jsonResponse.data.address);
+            localStorage.setItem("city", jsonResponse.data.city);
+            localStorage.setItem("zip", jsonResponse.data.zip);
+            localStorage.setItem("email", jsonResponse.data.email);
+            localStorage.setItem("password", jsonResponse.data.password);
+          } else {
+            return alert('Sign up failed')
+          }
+        })
+        .catch(function (error){
+          console.log("Error: ", error);
+        })
   } else {
       alert('Something went wrong!')
     }
 }
+
+function localSt() {
+  inputName.value = localStorage.getItem("name");
+  inputLastName.value = localStorage.getItem("lastName");
+  inputName.value = localStorage.getItem("name");
+  inputLastName.value = localStorage.getItem("lastName");
+  inputName.value = localStorage.getItem("name");
+  inputLastName.value = localStorage.getItem("lastName");
+  inputName.value = localStorage.getItem("name");
+  inputLastName.value = localStorage.getItem("lastName");
+  inputName.value = localStorage.getItem("name");
+  inputLastName.value = localStorage.getItem("lastName");
+}
+
+document.addEventListener("DOMContentLoaded", localSt);

@@ -96,7 +96,7 @@ function windowLogIn()
          fetch("https://basp-m2022-api-rest-server.herokuapp.com/login".concat("?email=", inputEmail.value, "&password=", inputPass.value))
           .then(function (response) {
             if(response.ok) {
-              return alert('Log in succes' + '\n' + inputEmail.value + inputPass.value)
+              return alert('Log in succes' + '\n' + inputEmail.value + '\n' + inputPass.value)
             } else {
               return alert('Log in failed')
             }
