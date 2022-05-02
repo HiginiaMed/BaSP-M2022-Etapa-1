@@ -26,7 +26,6 @@ inputEmail.addEventListener('blur', function(e) {
     document.getElementById('result-email').innerHTML = '*Please enter a valid Email address.';
     message.style.display = 'flex';
     message.style.color = '#FF0000';
-    message.style.backgroundColor = '#AFAFC2'
     document.getElementById('email-input').style.borderBottom = '3px solid #FF0000'
   }
 })
@@ -69,10 +68,9 @@ inputPass.addEventListener('blur', function(e) {
     messagePass.style.backgroundColor = '#AACE9B'
     document.getElementById('password-input').style.borderBottom = '1px solid #000000'
   } else {
-    document.getElementById('result-password').innerHTML = '*Invalid password, insert letters and numbers.';
+    document.getElementById('result-password').innerHTML = '*Invalid. Insert letters and numbers.';
     messagePass.style.display = 'flex';
     messagePass.style.color = '#FF0000';
-    messagePass.style.backgroundColor = '#AFAFC2'
     document.getElementById('password-input').style.borderBottom = '3px solid #FF0000'
   }
 })

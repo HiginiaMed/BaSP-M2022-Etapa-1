@@ -55,19 +55,14 @@ inputName.addEventListener('blur', function(e) {
     var message = document.getElementById('result-name');
     resultName = validateName(e);
     if (resultName) {
-      document.getElementById('result-name').innerHTML = 'Valid name';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('name-input').style.border = '1px solid #000000'
+      document.getElementById('name-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('name-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-name').innerHTML = '*Please enter a valid name.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('name-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -96,19 +91,14 @@ inputLastName.addEventListener('blur', function(e) {
     var message = document.getElementById('result-lastName');
     resultlastName = validatelastName(e);
     if (resultlastName) {
-      document.getElementById('result-lastName').innerHTML = 'Valid lastName';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('lastName-input').style.border = '1px solid #000000'
+      document.getElementById('lastName-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('lastName-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-lastName').innerHTML = '*Please enter a valid lastName.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('lastName-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -137,19 +127,14 @@ inputDni.addEventListener('blur', function(e) {
     var message = document.getElementById('result-dni');
     resultDni = validateDni(e);
     if (resultDni) {
-      document.getElementById('result-dni').innerHTML = 'Valid DNI';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('dni-input').style.border = '1px solid #000000'
+      document.getElementById('dni-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('dni-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-dni').innerHTML = '*Please enter a valid DNI. Just numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('dni-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -165,10 +150,10 @@ inputDni.addEventListener('focus', function() {
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
 
 function validateDate() {
-  if (new Date(inputDate.value).getTime() > new Date().getTime()) {
-      return false;
-  } else {
+  if (new Date(inputDate.value).getTime() < new Date().getTime()) {
       return true;
+  } else {
+      return false;
   }
 }
 
@@ -195,19 +180,14 @@ inputDate.addEventListener('blur', function() {
     resultDate = validateDate();
     console.log(inputDate.value)
     if (resultDate) {
-      document.getElementById('result-date').innerHTML = 'Valid date';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('date-input').style.border = '1px solid #000000'
+      document.getElementById('date-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('date-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-date').innerHTML = '*Please enter a valid date. Just numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('date-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -235,19 +215,14 @@ inputPhone.addEventListener('blur', function(e) {
     var message = document.getElementById('result-phone');
     resultPhone = validatePhone(e);
     if (resultPhone) {
-      document.getElementById('result-phone').innerHTML = 'Valid phone';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('phone-input').style.border = '1px solid #000000'
+      document.getElementById('phone-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('phone-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-phone').innerHTML = '*Please enter a valid phone. Just numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('phone-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -284,19 +259,14 @@ inputAddress.addEventListener('blur', function(e) {
     var message = document.getElementById('result-address');
     resultAddress = validateAddress(e);
     if (resultAddress) {
-      document.getElementById('result-address').innerHTML = 'Valid Address';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('address-input').style.border = '1px solid #000000'
+      document.getElementById('address-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('address-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-address').innerHTML = '*Please enter a valid Address.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('address-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -329,19 +299,14 @@ inputCity.addEventListener('blur', function(e) {
     var message = document.getElementById('result-city');
     resultCity = validateCity(e);
     if (resultCity) {
-      document.getElementById('result-city').innerHTML = 'Valid city';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('city-input').style.border = '1px solid #000000'
+      document.getElementById('city-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('city-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-city').innerHTML = '*Please enter a valid city.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('city-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -374,19 +339,14 @@ inputZip.addEventListener('blur', function(e) {
     var message = document.getElementById('result-zip');
     resultZip = validateZip(e);
     if (resultZip) {
-      document.getElementById('result-zip').innerHTML = 'Valid zip code';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('zip-input').style.border = '1px solid #000000'
+      document.getElementById('zip-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('zip-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-zip').innerHTML = '*Please enter a valid zip code.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('zip-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -415,19 +375,14 @@ inputEmail.addEventListener('blur', function(e) {
     var message = document.getElementById('result-email');
     resultEmail = validateEmail(e);
     if (resultEmail) {
-      document.getElementById('result-email').innerHTML = 'Valid Email address';
-      message.style.display = 'flex';
-      message.style.marginLeft = '30px';
-      message.style.color = '#ffffff';
-      message.style.backgroundColor = '#AACE9B'
-      document.getElementById('email-input').style.border = '1px solid #000000'
+      document.getElementById('email-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('email-input').style.border = '3px solid #69BE45'
       console.log('ok');
     } else {
       document.getElementById('result-email').innerHTML = '*Please enter a valid Email address.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
-      message.style.backgroundColor = '#AFAFC2'
       document.getElementById('email-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -460,19 +415,14 @@ inputPass.addEventListener('blur', function(e) {
     var messagePass = document.getElementById('result-password');
     resultPass = validatePass(e);
     if (resultPass) {
-      document.getElementById('result-password').innerHTML = 'Valid Password';
-      messagePass.style.display = 'flex';
-      messagePass.style.marginLeft = '30px';
-      messagePass.style.color = '#ffffff';
-      messagePass.style.backgroundColor = '#AACE9B'
-      document.getElementById('password-input').style.border = '1px solid #000000'
+      document.getElementById('password-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('password-input').style.border = '3px solid #69BE45'
       console.log('itsOk');
     } else {
       document.getElementById('result-password').innerHTML = '*Invalid password, insert letters and numbers.';
       messagePass.style.display = 'flex';
       messagePass.style.marginLeft = '30px';
       messagePass.style.color = '#FF0000';
-      messagePass.style.backgroundColor = '#AFAFC2'
       document.getElementById('password-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
@@ -500,19 +450,14 @@ inputConfPassword.addEventListener('blur', function() {
     var messagePass = document.getElementById('result-conf-password');
     resultConfPassword = corroboratePass();
     if (resultConfPassword) {
-      document.getElementById('result-conf-password').innerHTML = 'Valid Password';
-      messagePass.style.display = 'flex';
-      messagePass.style.marginLeft = '30px';
-      messagePass.style.color = '#ffffff';
-      messagePass.style.backgroundColor = '#AACE9B'
-      document.getElementById('confp-input').style.border = '1px solid #000000'
+      document.getElementById('confp-input').style.backgroundColor = '#AACE9B80'
+      document.getElementById('confp-input').style.border = '3px solid #69BE45'
       console.log('itsOk');
     } else {
       document.getElementById('result-conf-password').innerHTML = '*Invalid password, doesn`t match.';
       messagePass.style.display = 'flex';
       messagePass.style.marginLeft = '30px';
       messagePass.style.color = '#FF0000';
-      messagePass.style.backgroundColor = '#AFAFC2'
       document.getElementById('confp-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
