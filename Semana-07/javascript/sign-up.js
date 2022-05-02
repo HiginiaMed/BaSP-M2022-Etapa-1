@@ -1,5 +1,5 @@
 var inputName = document.getElementById('name-input');
-var inputLastName = document.getElementById('surname-input');
+var inputLastName = document.getElementById('lastName-input');
 var inputDni = document.getElementById('dni-input');
 var inputDate = document.getElementById('date-input');
 var inputPhone = document.getElementById('phone-input');
@@ -35,8 +35,8 @@ function someNumber(arr) {
 function someNumberAndLetter(arr) {
     return arr.some((c) => numbersAndLetters.includes(c));
 }
-function someNumbersLettersAndSpace(arr) {
-  return arr.some((c) => numbersLettersAndSpace.includes(c));
+function everyNumbersLettersAndSpace(arr) {
+  return arr.every((c) => numbersLettersAndSpace.includes(c));
 }
   
 // validate name. Solo letras y debe tener más de 3 letras.
@@ -80,9 +80,9 @@ inputEmail.addEventListener('focus', function() {
     errorLineMsg.style.border = '#fff';
 })
 
-// validate surname. Solo letras y debe tener más de 3 letras.
+// validate lastName. Solo letras y debe tener más de 3 letras.
   
-function validateSurname(e) {
+function validatelastName(e) {
     var name = e.target.value;
     var arrName = name.toLowerCase().split('');
     if (everyLetter(arrName) && someLetters(arrName) && name.length > 3) {
@@ -90,34 +90,34 @@ function validateSurname(e) {
     }return false;
 }
 
-var resultSurname = false;
+var resultlastName = false;
 
 inputLastName.addEventListener('blur', function(e) {
-    var message = document.getElementById('result-surname');
-    resultSurname = validateSurname(e);
-    if (resultSurname) {
-      document.getElementById('result-surname').innerHTML = 'Valid Surname';
+    var message = document.getElementById('result-lastName');
+    resultlastName = validatelastName(e);
+    if (resultlastName) {
+      document.getElementById('result-lastName').innerHTML = 'Valid lastName';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#ffffff';
       message.style.backgroundColor = '#AACE9B'
-      document.getElementById('surname-input').style.border = '1px solid #000000'
+      document.getElementById('lastName-input').style.border = '1px solid #000000'
       console.log('ok');
     } else {
-      document.getElementById('result-surname').innerHTML = '*Please enter a valid surname.';
+      document.getElementById('result-lastName').innerHTML = '*Please enter a valid lastName.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       message.style.backgroundColor = '#AFAFC2'
-      document.getElementById('surname-input').style.border = '3px solid #FF0000'
+      document.getElementById('lastName-input').style.border = '3px solid #FF0000'
       console.log('not ok')
     }
 })
   
 inputLastName.addEventListener('focus', function() {
-    var errorMsg = document.getElementById('result-surname');
+    var errorMsg = document.getElementById('result-lastName');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('surname-input');
+    var errorLineMsg = document.getElementById('lastName-input');
     errorLineMsg.style.border = '#fff';
 })
 
@@ -164,20 +164,28 @@ inputDni.addEventListener('focus', function() {
 
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
 
-function validateDate(dateToCheck) {
-  var [year, month, day] = dateToCheck.split('-');
-  var isoFormattedStr = `${month}/${day}/${year}`;
-  var date = new Date(isoFormattedStr);
-  var timestamp = date.getTime();
-  if (typeof timestamp !== "number" || Number.isNaN(timestamp))
-  {
+function validateDate() {
+  if (new Date(inputDate.value).getTime() > new Date().getTime()) {
       return false;
+  } else {
+      return true;
   }
-  else if (new Date(inputDate.value).getTime() > new Date().getTime())
-  {
-      return false;
-  }
-  return  isoFormattedStr;
+}
+
+function toMonthDayYear(dateToConv){
+
+  [year, month, day] = dateToConv.split('-');
+  var dateMDY = [month, day, year].join('/')
+
+  return dateMDY
+}
+
+function toYearMonthDay(dateToConv){
+
+  [month, day, year] = dateToConv.split('/');
+  var dateYMD = [year, month, day].join('-')
+
+  return dateYMD
 }
 
 var resultDate = false;
@@ -252,18 +260,14 @@ inputPhone.addEventListener('focus', function() {
     errorLineMsg.style.border = '#fff';
 })
   
-/* Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio. como poner el espacio?
-En cuando a lo del address, podemos chequear en ese value del input usando substring, dividiendolo en dos partes, 
-primero desde que arranca hasta el index of del espacio en blanco, y lo mismo para la otra parte, 
-desde el index hasta el value.length
-15:51
-Y ahí chequeamos la primera parte que sea string y la segunda numeros*/
+/* Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio.*/
+
 
 function validateAddress(e) {
     var address = e.target.value;
     var arrAddress = address.toLowerCase().split('');
     console.log (arrAddress);
-    if (someNumbersLettersAndSpace(arrAddress)) {
+    if (everyNumbersLettersAndSpace(arrAddress)) {
         if (arrAddress.length > 5) {
             return true;
         } else {
@@ -528,24 +532,25 @@ const btnSignUp = document.getElementById('btn');
 btnSignUp.addEventListener("click", () => windowSignUp());
 
 function windowSignUp(){
-  if(resultName && resultSurname && resultDni && resultDate && resultPhone && resultAddress && resultCity && 
+  if(resultName && resultlastName && resultDni && resultDate && resultPhone && resultAddress && resultCity && 
     resultZip && resultEmail && resultPass && resultConfPassword){
       fetch("https://basp-m2022-api-rest-server.herokuapp.com/signup".concat("?name=", inputName.value, 
-      "&lastName=", inputLastName.value, "&dni=", inputDni.value, "&dob=", inputDate.value,
+      "&lastName=", inputLastName.value, "&dni=", inputDni.value, "&dob=", toMonthDayYear(inputDate.value),
       "&phone=", inputPhone.value, "&address=", inputAddress.value, "&city=", inputCity.value, "&zip=", inputZip.value,
-      "&email=", inputEmail.value, "&password=", inputPass.value))
+      "&email=", inputEmail.value, "&password=", inputPass.value, "&confpassword=", inputConfPassword.value))
         .then(function(response){
           return response.json();
         })
         .then(function(jsonResponse) {
-          if(jsonResponse.ok) {
-            return alert('Sign up succes' + '\n' + inputName.value + '\n' + inputLastName.value + '\n' + inputDni.value + 
-            '\n' + inputDate.value + '\n' + inputPhone.value + '\n' + inputAddress.value + '\n' + inputCity.value + 
-            '\n' + inputZip.value + '\n' + inputEmail.value + '\n' + inputPass.value + '\n' + inputConfPass.value)
-          } 
-          else if (jsonResponse.ok) {
+          if(jsonResponse.success) {
+            alert('Sign up succes' + '\n' + 'Name: ' + inputName.value + '\n' + 'Last Name: ' + inputLastName.value + 
+            '\n' + 'DNI: ' + inputDni.value + '\n' + 'Date of Birth: ' + inputDate.value + 
+            '\n' + 'Phone: ' + inputPhone.value + 
+            '\n' + 'Address: ' + inputAddress.value + '\n' + 'City: ' + inputCity.value + 
+            '\n' + 'Zip Code: ' + inputZip.value + '\n' + 'Email: ' + inputEmail.value + 
+            '\n' + 'Password: ' + inputPass.value + '\n' + 'Confirm Password: ' + inputConfPassword.value)
             localStorage.setItem("name", jsonResponse.data.name);
-            localStorage.setItem("lastname", jsonResponse.data.lastName);
+            localStorage.setItem("lastName", jsonResponse.data.lastName);
             localStorage.setItem("dni", jsonResponse.data.dni);
             localStorage.setItem("dob", jsonResponse.data.dob);
             localStorage.setItem("phone", jsonResponse.data.phone);
@@ -554,6 +559,7 @@ function windowSignUp(){
             localStorage.setItem("zip", jsonResponse.data.zip);
             localStorage.setItem("email", jsonResponse.data.email);
             localStorage.setItem("password", jsonResponse.data.password);
+            return true;
           } else {
             return alert('Sign up failed')
           }
@@ -569,14 +575,15 @@ function windowSignUp(){
 function localSt() {
   inputName.value = localStorage.getItem("name");
   inputLastName.value = localStorage.getItem("lastName");
-  inputName.value = localStorage.getItem("name");
-  inputLastName.value = localStorage.getItem("lastName");
-  inputName.value = localStorage.getItem("name");
-  inputLastName.value = localStorage.getItem("lastName");
-  inputName.value = localStorage.getItem("name");
-  inputLastName.value = localStorage.getItem("lastName");
-  inputName.value = localStorage.getItem("name");
-  inputLastName.value = localStorage.getItem("lastName");
+  inputDni.value = (localStorage.getItem("dni"));
+  inputDate.value = toYearMonthDay (localStorage.getItem("dob"));
+  inputPhone.value = localStorage.getItem("phone");
+  inputAddress.value = localStorage.getItem("address");
+  inputCity.value = localStorage.getItem("city");
+  inputZip.value = localStorage.getItem("zip");
+  inputEmail.value = localStorage.getItem("email");
+  inputPass.value = localStorage.getItem("password");
+  inputConfPassword.value = localStorage.getItem("password");
 }
 
 document.addEventListener("DOMContentLoaded", localSt);
