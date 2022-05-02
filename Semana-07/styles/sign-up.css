@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     padding: 10px;
     background-color: #AFAFC2;
     border-radius: 30px;
@@ -70,18 +70,12 @@
       align-items: center;
     }
     .signup-input {
-        width: 90%;
+        width: 300px;
       }
   }
   
   @media screen and (min-width: 1024px) {
     section{
       margin-top: 150px;
-    }
-    .signup-container {
-        width: 90%;
-    }
-    .signup-container {
-      width: 50%;
     }
   }

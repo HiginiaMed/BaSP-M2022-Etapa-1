@@ -17,11 +17,7 @@ inputEmail.addEventListener('blur', function(e) {
   var message = document.getElementById('result-email');
   result = validateEmail(e);
   if (result) {
-    document.getElementById('result-email').innerHTML = 'Valid Email address';
-    message.style.display = 'flex';
-    message.style.color = '#ffffff';
-    message.style.backgroundColor = '#AACE9B'
-    document.getElementById('email-input').style.borderBottom = '1px solid #000000'
+    document.getElementById('email-input').style.borderBottom = '3px solid #69BE45'
   } else {
     document.getElementById('result-email').innerHTML = '*Please enter a valid Email address.';
     message.style.display = 'flex';
@@ -62,11 +58,7 @@ inputPass.addEventListener('blur', function(e) {
   var messagePass = document.getElementById('result-password');
   resultPass = validatePass(e);
   if (resultPass) {
-    document.getElementById('result-password').innerHTML = 'Valid Password';
-    messagePass.style.display = 'flex';
-    messagePass.style.color = '#ffffff';
-    messagePass.style.backgroundColor = '#AACE9B'
-    document.getElementById('password-input').style.borderBottom = '1px solid #000000'
+    document.getElementById('password-input').style.borderBottom = '3px solid #69BE45'
   } else {
     document.getElementById('result-password').innerHTML = '*Invalid. Insert letters and numbers.';
     messagePass.style.display = 'flex';

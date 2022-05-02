@@ -64,6 +64,7 @@ inputName.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('name-input').style.border = '3px solid #FF0000'
+      document.getElementById('name-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -71,8 +72,6 @@ inputName.addEventListener('blur', function(e) {
 inputEmail.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-name');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('name-input');
-    errorLineMsg.style.border = '#fff';
 })
 
 // validate lastName. Solo letras y debe tener más de 3 letras.
@@ -100,6 +99,7 @@ inputLastName.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('lastName-input').style.border = '3px solid #FF0000'
+      document.getElementById('lastName-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -107,8 +107,6 @@ inputLastName.addEventListener('blur', function(e) {
 inputLastName.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-lastName');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('lastName-input');
-    errorLineMsg.style.border = '#fff';
 })
 
 // validate dni. Solo número y debe tener más de 7 números.
@@ -136,6 +134,7 @@ inputDni.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('dni-input').style.border = '3px solid #FF0000'
+      document.getElementById('dni-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -143,8 +142,6 @@ inputDni.addEventListener('blur', function(e) {
 inputDni.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-dni');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('dni-input');
-    errorLineMsg.style.border = '#fff';
 })
 
 //Fecha de Nacimiento: Con formato dd/mm/aaaa.
@@ -165,9 +162,11 @@ function toMonthDayYear(dateToConv){
   return dateMDY
 }
 
+var dateToConv = inputDate.value;
+
 function toYearMonthDay(dateToConv){
 
-  [month, day, year] = dateToConv.split('/');
+  [month, day, year] = dateToConv?.split('/');
   var dateYMD = [year, month, day].join('-')
 
   return dateYMD
@@ -189,6 +188,7 @@ inputDate.addEventListener('blur', function() {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('date-input').style.border = '3px solid #FF0000'
+      document.getElementById('date-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -196,9 +196,8 @@ inputDate.addEventListener('blur', function() {
 inputDate.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-date');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('date-input');
-    errorLineMsg.style.border = '#fff';
 })
+
 // Teléfono: Solo número y debe tener 10 números.
 
 function validatePhone(e) {
@@ -224,6 +223,7 @@ inputPhone.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('phone-input').style.border = '3px solid #FF0000'
+      document.getElementById('phone-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -231,8 +231,6 @@ inputPhone.addEventListener('blur', function(e) {
 inputPhone.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-phone');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('phone-input');
-    errorLineMsg.style.border = '#fff';
 })
   
 /* Dirección: Al menos 5 caracteres con letras, números y un espacio en el medio.*/
@@ -268,6 +266,7 @@ inputAddress.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('address-input').style.border = '3px solid #FF0000'
+      document.getElementById('address-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -275,8 +274,6 @@ inputAddress.addEventListener('blur', function(e) {
 inputAddress.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-address');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('address-input');
-    errorLineMsg.style.border = '#fff';
 })
 
 // Localidad: Texto alfanumérico y debe tener más de 3 letras.
@@ -308,6 +305,7 @@ inputCity.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('city-input').style.border = '3px solid #FF0000'
+      document.getElementById('city-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -315,8 +313,6 @@ inputCity.addEventListener('blur', function(e) {
 inputCity.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-city');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('city-input');
-    errorLineMsg.style.border = '#fff';
 })
   
 // Código Postal: Solo número y debe tener entre 4 y 5 números.
@@ -348,6 +344,7 @@ inputZip.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('zip-input').style.border = '3px solid #FF0000'
+      document.getElementById('zip-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -355,8 +352,6 @@ inputZip.addEventListener('blur', function(e) {
 inputZip.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-zip');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('zip-input');
-    errorLineMsg.style.border = '#fff';
 })
 
 // Email: Debe tener un formato de email válido.
@@ -384,6 +379,7 @@ inputEmail.addEventListener('blur', function(e) {
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
       document.getElementById('email-input').style.border = '3px solid #FF0000'
+      document.getElementById('email-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -391,8 +387,6 @@ inputEmail.addEventListener('blur', function(e) {
 inputEmail.addEventListener('focus', function() {
     var errorMsg = document.getElementById('result-email');
     errorMsg.style.display = 'none';
-    var errorLineMsg = document.getElementById('email-input');
-    errorLineMsg.style.border = '#fff';
 })
   
 // Contraseña: Al menos 8 caracteres, formados por letras y números.
@@ -424,6 +418,7 @@ inputPass.addEventListener('blur', function(e) {
       messagePass.style.marginLeft = '30px';
       messagePass.style.color = '#FF0000';
       document.getElementById('password-input').style.border = '3px solid #FF0000'
+      document.getElementById('password-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -431,8 +426,6 @@ inputPass.addEventListener('blur', function(e) {
 inputPass.addEventListener('focus', function() {
     var errorPass = document.getElementById('result-password');
     errorPass.style.display = 'none';
-    var errorLinePass = document.getElementById('password-input');
-    errorLinePass.style.border = '#fff';
 })
 
 // Repetir Contraseña: Al menos 8 caracteres, formados por letras y números.
@@ -459,6 +452,7 @@ inputConfPassword.addEventListener('blur', function() {
       messagePass.style.marginLeft = '30px';
       messagePass.style.color = '#FF0000';
       document.getElementById('confp-input').style.border = '3px solid #FF0000'
+      document.getElementById('confp-input').style.background = '#AFAFC2'
       console.log('not ok')
     }
 })
@@ -466,8 +460,6 @@ inputConfPassword.addEventListener('blur', function() {
 inputConfPassword.addEventListener('focus', function() {
     var errorPass = document.getElementById('result-conf-password');
     errorPass.style.display = 'none';
-    var errorLinePass = document.getElementById('confp-input');
-    errorLinePass.style.border = '#fff';
 })
   
 //window
@@ -521,7 +513,7 @@ function localSt() {
   inputName.value = localStorage.getItem("name");
   inputLastName.value = localStorage.getItem("lastName");
   inputDni.value = (localStorage.getItem("dni"));
-  inputDate.value = toYearMonthDay (localStorage.getItem("dob"));
+  inputDate.value = toYearMonthDay(localStorage.getItem("dob"));
   inputPhone.value = localStorage.getItem("phone");
   inputAddress.value = localStorage.getItem("address");
   inputCity.value = localStorage.getItem("city");
