@@ -521,53 +521,55 @@ function windowSignUp(){
             localStorage.setItem("email", jsonResponse.data.email);
             localStorage.setItem("password", jsonResponse.data.password);
             return true;
-          } else if (inputName.value == '' || inputLastName.value == '' || inputDni.value == '' || inputDate.value == '' || inputPhone.value == ''
-          || inputAddress.value == '' || inputCity.value == '' || inputZip.value == '' || inputEmail.value == '' || inputPass.value == ''
-          || inputConfPassword.value == '') {
-              alert('All fields are required');
-          } else if (resultName == false || resultlastName == false || resultDni == false || resultDate == false
-          || resultPhone == false || resultAddress == false || resultCity == false || resultZip == false
-          || resultEmail == false || resultPass == false || resultConfPassword == false) {
-            if (resultName == false) {
-                nameWrong = ("The Name is wrong." + '\n');
-            }
-            if (resultlastName == false) {
-                surnameWrong = ("The Surname is wrong." + '\n');
-            }
-            if (resultDni == false) {
-                IDWrong = ("The ID is wrong." + '\n');
-            }
-            if (resultDate == false) {
-                birthdayWrong = ("The Birthday is wrong." + '\n');
-            }
-            if (resultPhone == false) {
-                phoneWrong = ("The Phone is wrong." + '\n');
-            }
-            if (resultAddress == false) {
-                adressWrong = ("The Adress is wrong." + '\n');
-            }
-            if (resultCity == false) {
-                cityWrong = ("The City is wrong." + '\n');
-            }
-            if (resultZip == false) {
-                ZCWrong = ("The Zip Code is wrong." + '\n');
-            }
-            if (resultEmail == false) {
-                emailWrong = ("The Email is wrong." + '\n');
-            }
-            if (resultPass == false) {
-                passwordWrong = ("The Password is wrong." + '\n');
-            }
-            if (resultConfPassword == false) {
-                repeatPasswordWrong = ("Repeat Password is wrong." + '\n');
-            } 
-            alert(nameWrong + surnameWrong + IDWrong + birthdayWrong + phoneWrong + 
-            adressWrong + cityWrong + ZCWrong + emailWrong + passwordWrong + repeatPasswordWrong)
+          } else {
+            return alert('Sign up failed')
           }
         })
         .catch(function (error){
           console.log("Error: ", error);
         })
+    } else if (inputName.value == '' || inputLastName.value == '' || inputDni.value == '' || inputDate.value == '' || inputPhone.value == ''
+      || inputAddress.value == '' || inputCity.value == '' || inputZip.value == '' || inputEmail.value == '' || inputPass.value == ''
+      || inputConfPassword.value == '') {
+          alert('All fields are required');
+    } else if (resultName == false || resultlastName == false || resultDni == false || resultDate == false
+    || resultPhone == false || resultAddress == false || resultCity == false || resultZip == false
+    || resultEmail == false || resultPass == false || resultConfPassword == false) {
+        if (resultName == false) {
+            nameWrong = ("The Name is wrong." + '\n');
+        }
+        if (resultlastName == false) {
+            surnameWrong = ("The Surname is wrong." + '\n');
+        }
+        if (resultDni == false) {
+            IDWrong = ("The ID is wrong." + '\n');
+        }
+        if (resultDate == false) {
+            birthdayWrong = ("The Birthday is wrong." + '\n');
+        }
+        if (resultPhone == false) {
+            phoneWrong = ("The Phone is wrong." + '\n');
+        }
+        if (resultAddress == false) {
+            adressWrong = ("The Adress is wrong." + '\n');
+        }
+        if (resultCity == false) {
+            cityWrong = ("The City is wrong." + '\n');
+        }
+        if (resultZip == false) {
+            ZCWrong = ("The Zip Code is wrong." + '\n');
+        }
+        if (resultEmail == false) {
+            emailWrong = ("The Email is wrong." + '\n');
+        }
+        if (resultPass == false) {
+            passwordWrong = ("The Password is wrong." + '\n');
+        }
+        if (resultConfPassword == false) {
+            repeatPasswordWrong = ("Repeat Password is wrong." + '\n');
+        } 
+        alert(nameWrong + surnameWrong + IDWrong + birthdayWrong + phoneWrong + 
+        adressWrong + cityWrong + ZCWrong + emailWrong + passwordWrong + repeatPasswordWrong)
     }
 }
 

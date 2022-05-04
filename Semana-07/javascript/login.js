@@ -90,7 +90,7 @@ function windowLogIn()
           .then(function (response) {
             if(response.ok) {
               return alert('LOG IN SUCCESS!' + '\n' + inputEmail.value + '\n' + inputPass.value)
-            } else if (inputEmail.value != 'rose@radiumrocket.com' || inputPass.value != 'BaSP2022') {
+            } else {
               return alert('Log in failed')
             }
           })
