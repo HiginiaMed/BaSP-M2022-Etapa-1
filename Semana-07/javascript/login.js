@@ -18,6 +18,7 @@ inputEmail.addEventListener('blur', function(e) {
   result = validateEmail(e);
   if (result) {
     document.getElementById('email-input').style.borderBottom = '3px solid #69BE45'
+    return result = true;
   } else {
     document.getElementById('result-email').innerHTML = '*Please enter a valid Email address.';
     message.style.display = 'flex';
@@ -53,12 +54,12 @@ function validatePass(e) {
 
 var resultPass = false;
 
-
 inputPass.addEventListener('blur', function(e) {
   var messagePass = document.getElementById('result-password');
   resultPass = validatePass(e);
   if (resultPass) {
     document.getElementById('password-input').style.borderBottom = '3px solid #69BE45'
+    return resultPass = true;
   } else {
     document.getElementById('result-password').innerHTML = '*Invalid. Insert letters and numbers.';
     messagePass.style.display = 'flex';
@@ -75,6 +76,8 @@ inputPass.addEventListener('focus', function() {
 })
 
 //window
+var emailWrong = ("");
+var passwordWrong = ("");
 
 const btnLogIn = document.getElementById('btn');
 
@@ -86,7 +89,7 @@ function windowLogIn()
          fetch("https://basp-m2022-api-rest-server.herokuapp.com/login".concat("?email=", inputEmail.value, "&password=", inputPass.value))
           .then(function (response) {
             if(response.ok) {
-              return alert('Log in succes' + '\n' + inputEmail.value + '\n' + inputPass.value)
+              return alert('LOG IN SUCCESS!' + '\n' + inputEmail.value + '\n' + inputPass.value)
             } else {
               return alert('Log in failed')
             }
@@ -94,7 +97,15 @@ function windowLogIn()
           .catch(function (error){
             console.log("Error: ", error);
           })
-    } else {
-        alert('Something went wrong!')
-    }
+      } else if (inputEmail.value == '' || inputPass.value == '') {
+      alert('All fields are required');
+      } else if (result == false || resultPass == false) {
+          if (result == false) {
+              emailWrong = ("The Email is wrong." + '\n');
+          }
+          if (resultPass == false) {
+              passwordWrong = ("The Password is wrong." + '\n');
+          }
+          alert(emailWrong + passwordWrong)
+      }
 }

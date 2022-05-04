@@ -58,8 +58,9 @@ inputName.addEventListener('blur', function(e) {
       document.getElementById('name-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('name-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultName = true;
     } else {
-      document.getElementById('result-name').innerHTML = '*Please enter a valid name.';
+      document.getElementById('result-name').innerHTML = '*Just letters.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -93,8 +94,9 @@ inputLastName.addEventListener('blur', function(e) {
       document.getElementById('lastName-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('lastName-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultLastName = true;
     } else {
-      document.getElementById('result-lastName').innerHTML = '*Please enter a valid lastName.';
+      document.getElementById('result-lastName').innerHTML = '*Just letters.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -128,8 +130,9 @@ inputDni.addEventListener('blur', function(e) {
       document.getElementById('dni-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('dni-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultDni = true;
     } else {
-      document.getElementById('result-dni').innerHTML = '*Please enter a valid DNI. Just numbers.';
+      document.getElementById('result-dni').innerHTML = '*Enter a valid DNI. Just numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -182,8 +185,9 @@ inputDate.addEventListener('blur', function() {
       document.getElementById('date-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('date-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultDate = true;
     } else {
-      document.getElementById('result-date').innerHTML = '*Please enter a valid date. Just numbers.';
+      document.getElementById('result-date').innerHTML = '*Enter a valid date, just numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -217,8 +221,9 @@ inputPhone.addEventListener('blur', function(e) {
       document.getElementById('phone-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('phone-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultPhone = true;
     } else {
-      document.getElementById('result-phone').innerHTML = '*Please enter a valid phone. Just numbers.';
+      document.getElementById('result-phone').innerHTML = '*Just ten numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -260,8 +265,9 @@ inputAddress.addEventListener('blur', function(e) {
       document.getElementById('address-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('address-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultAddress = true;
     } else {
-      document.getElementById('result-address').innerHTML = '*Please enter a valid Address.';
+      document.getElementById('result-address').innerHTML = '*Enter a valid Address, letters and numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -299,8 +305,9 @@ inputCity.addEventListener('blur', function(e) {
       document.getElementById('city-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('city-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultCity = true;
     } else {
-      document.getElementById('result-city').innerHTML = '*Please enter a valid city.';
+      document.getElementById('result-city').innerHTML = '*Enter a valid city.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -338,8 +345,9 @@ inputZip.addEventListener('blur', function(e) {
       document.getElementById('zip-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('zip-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultZip = true;
     } else {
-      document.getElementById('result-zip').innerHTML = '*Please enter a valid zip code.';
+      document.getElementById('result-zip').innerHTML = '*Just 4 or 5 numbers.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -373,8 +381,9 @@ inputEmail.addEventListener('blur', function(e) {
       document.getElementById('email-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('email-input').style.border = '3px solid #69BE45'
       console.log('ok');
+      resultEmail = true;
     } else {
-      document.getElementById('result-email').innerHTML = '*Please enter a valid Email address.';
+      document.getElementById('result-email').innerHTML = '*Enter a valid Email address.';
       message.style.display = 'flex';
       message.style.marginLeft = '30px';
       message.style.color = '#FF0000';
@@ -412,8 +421,10 @@ inputPass.addEventListener('blur', function(e) {
       document.getElementById('password-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('password-input').style.border = '3px solid #69BE45'
       console.log('itsOk');
+      resultPass = true;
     } else {
-      document.getElementById('result-password').innerHTML = '*Invalid password, insert letters and numbers.';
+      document.getElementById('result-password').innerHTML = 
+      '*Invalid password. Insert more than 8 letters and numbers.';
       messagePass.style.display = 'flex';
       messagePass.style.marginLeft = '30px';
       messagePass.style.color = '#FF0000';
@@ -446,6 +457,7 @@ inputConfPassword.addEventListener('blur', function() {
       document.getElementById('confp-input').style.backgroundColor = '#AACE9B80'
       document.getElementById('confp-input').style.border = '3px solid #69BE45'
       console.log('itsOk');
+      resultConfPassword = true;
     } else {
       document.getElementById('result-conf-password').innerHTML = '*Invalid password, doesn`t match.';
       messagePass.style.display = 'flex';
@@ -463,6 +475,18 @@ inputConfPassword.addEventListener('focus', function() {
 })
   
 //window
+
+var nameWrong = ("");
+var surnameWrong = ("");
+var IDWrong = ("");
+var birthdayWrong = ("");
+var phoneWrong = ("");
+var adressWrong = ("");
+var cityWrong = ("");
+var ZCWrong = ("");
+var emailWrong = ("");
+var passwordWrong = ("");
+var repeatPasswordWrong = ("");
   
 const btnSignUp = document.getElementById('btn');
   
@@ -480,7 +504,7 @@ function windowSignUp(){
         })
         .then(function(jsonResponse) {
           if(jsonResponse.success) {
-            alert('Sign up succes' + '\n' + 'Name: ' + inputName.value + '\n' + 'Last Name: ' + inputLastName.value + 
+            alert('SIGN UP SUCCESS!' + '\n' + 'Name: ' + inputName.value + '\n' + 'Last Name: ' + inputLastName.value + 
             '\n' + 'DNI: ' + inputDni.value + '\n' + 'Date of Birth: ' + inputDate.value + 
             '\n' + 'Phone: ' + inputPhone.value + 
             '\n' + 'Address: ' + inputAddress.value + '\n' + 'City: ' + inputCity.value + 
@@ -504,8 +528,48 @@ function windowSignUp(){
         .catch(function (error){
           console.log("Error: ", error);
         })
-  } else {
-      alert('Something went wrong!')
+    } else if (inputName.value == '' || inputLastName.value == '' || inputDni.value == '' || inputDate.value == '' || inputPhone.value == ''
+      || inputAddress.value == '' || inputCity.value == '' || inputZip.value == '' || inputEmail.value == '' || inputPass.value == ''
+      || inputConfPassword.value == '') {
+          alert('All fields are required');
+    } else if (resultName == false || resultlastName == false || resultDni == false || resultDate == false
+    || resultPhone == false || resultAddress == false || resultCity == false || resultZip == false
+    || resultEmail == false || resultPass == false || resultConfPassword == false) {
+        if (resultName == false) {
+            nameWrong = ("The Name is wrong." + '\n');
+        }
+        if (resultlastName == false) {
+            surnameWrong = ("The Surname is wrong." + '\n');
+        }
+        if (resultDni == false) {
+            IDWrong = ("The ID is wrong." + '\n');
+        }
+        if (resultDate == false) {
+            birthdayWrong = ("The Birthday is wrong." + '\n');
+        }
+        if (resultPhone == false) {
+            phoneWrong = ("The Phone is wrong." + '\n');
+        }
+        if (resultAddress == false) {
+            adressWrong = ("The Adress is wrong." + '\n');
+        }
+        if (resultCity == false) {
+            cityWrong = ("The City is wrong." + '\n');
+        }
+        if (resultZip == false) {
+            ZCWrong = ("The Zip Code is wrong." + '\n');
+        }
+        if (resultEmail == false) {
+            emailWrong = ("The Email is wrong." + '\n');
+        }
+        if (resultPass == false) {
+            passwordWrong = ("The Password is wrong." + '\n');
+        }
+        if (resultConfPassword == false) {
+            repeatPasswordWrong = ("Repeat Password is wrong." + '\n');
+        } 
+        alert(nameWrong + surnameWrong + IDWrong + birthdayWrong + phoneWrong + 
+        adressWrong + cityWrong + ZCWrong + emailWrong + passwordWrong + repeatPasswordWrong)
     }
 }
 
@@ -524,3 +588,4 @@ function localSt() {
 }
 
 document.addEventListener("DOMContentLoaded", localSt);
+
